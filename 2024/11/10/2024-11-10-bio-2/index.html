@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>浮生一梦 | 第二辑 | My Blog</title>
+    <meta name="author" content="Mark. Z." />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>MY BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MY BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>浮生一梦 | 第二辑</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/10
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                浮生一梦
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%9B%9E%E5%BF%86/" style="color: #00a596">
+                    回忆
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #ff7d73">
+                    浮生一梦
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p><strong>这是一首写给自己的诗</strong></p>
+<span id="more"></span>
+
+<h4 id="三"><a href="#三" class="headerlink" title="三"></a>三</h4><p>接下就要开始讲我到成都求学的经历了，因为从这段时间点开始，很多人都断断续续也算是保持了长久的联系，所以便想着采用一种不一样的写法，我选择为每个人单开一个小节，用我的眼光来好好想想和ta之间发生的故事。</p>
+<h4 id="三-一"><a href="#三-一" class="headerlink" title="三.一"></a>三.一</h4><p>其实在成华求学的过程中，留给我最深印象的必然是黄启亮。黄启亮和我一直保持联系到现在，其实说来也巧，我感觉我一直在追寻他的脚步，直到绝望的发现，人与人之间的差距确实比人和狗还大。</p>
+<p>黄狗是个妙人，五年级刚入学的时候，他还难以摆脱和父母分离的苦楚，每天晚上熄灯后都要打个手电筒看他妈妈的照片，为此还被老师误以为在被窝里看书，结果被抓之后直接把照片和手电筒一起没收了，并且还因此受到了整个寝室的嘲讽。但黄狗本身毫不在意，而是自顾自地看他那本背景为秦朝的小说，以至于专注到被人把裤子拔掉都懒得去理。</p>
+<p>其实在小学时，黄狗就已经展现出来不俗地变态特性，以来喜欢攻击他人下体，并以此为乐，六年级搬到隔壁宿舍后，在所谓地日批大赛上日常性地蝉联冠军，据说只有他不在时，才能让陈星侥幸偷一波冠军。再加上五年级的时候，黄狗最喜欢对男同学狂亲，而对女同学唯唯诺诺，导致我对他的感官停留在了“不正常”这一维度上。</p>
+<p>抛开这一方面，黄狗本身还是值得让人学习的，尤其是相当稳健的学业成绩，几乎没有见他有过失误，都不说是大失误了，小失误都基本没有，成绩一直稳中求进，学业水平从小学还经常被我超越到初中连续七次年级第一到达顶峰后从未衰落（经典中的经典：黄双看到全班考的很差心情很烂，再加上黄启亮又考了第一一脸吊样估计惹到黄双了，黄双怒斥黄启亮带头退步，说上次考试比第二名高十分，这次只高了五分。），再到高二跨级考678提前进入北大，再到金融系绩点第一，基本没有看他后退过，这种令人发指的稳定程度简直让人眼红。当然，这辈子薄纱黄启亮的几次我都记得一清二楚：六年级第二次月考，年级排名高出三名；六下入学考试，我小小拿下年级第一；初一上半期考试，黄启亮唯一一次失误，落后于全班三分之二的同学，甚至还去办公室哭了一场；初三下入学考试数学爆杀他10分；如果把高考也算上的话一共就这五次。</p>
+<p>除了学业以外，黄狗最搞的还是感情经历，从我知道的五年级开始，到大二一共差不多八年时间，一直坚持喜欢杨靖菲，若是在一起我都不会觉得特别强，但他们根本没在一起过，甚至大二上期黄启亮去表白还失败了，这种强大的韧性和持久度确实值得敬佩。当然这件事情经我之口传播的还是有点广，我对此表达深深的愧疚之情。</p>
+<p>前段时间，黄启亮从学生会主席的位置上退下，我也和他交流过一些，听他经典的阴谋论，表示数院从古至今就是一言堂，从吴总到段总，都是一个人说了算，而他黄启亮想搞改革，想创新，好像触动了别人的利益，于是就被人搞了。显示述职的时候被段总安排人刁难，再是常委都不做了，直接跑路，反正也是一副被人刚伤的样子。说老实话，学生会圈子不大，屁事一堆，若是去争校学生会主席，取争一个学联领袖的名额也就罢了，一个院系学生会也能搞个党争是真的抽象。当然我在高中是已经了解到学生会就是一个离谱的存在，要么依附于老师，成为狗腿子，要么狗咬狗两败俱伤，反正不是个好地方，也庆幸我在大学时没有加入学生会吧，远离了很多争端与矛盾。</p>
+<p>言归正传，黄狗是一浑身充满着传奇色彩却又无比现实的一个人，现在看到他我都有点恍惚，这种人确实值得敬佩。</p>
+<h4 id="三-二"><a href="#三-二" class="headerlink" title="三.二"></a>三.二</h4><p>抛开相处时间这样的因素之外，杨靖菲无疑是靠“效率”给我留下记忆最深刻的一位。当时班级里一共有4位班长，但往往给人感觉到只有她一位，剩下的几位似乎都是围绕着她进行工作开展，以至于除了黄启亮这种六年级时欲要夺权这种逆天操作给我留下了深刻印象外，我已经忘记了其他几位班长是谁。</p>
+<p>杨靖菲无疑是一位及其亮眼的存在，至少在小学的时候就把她的光彩展露的淋漓尽致。Out-going已经不足以描述了，直到今天她依然遇到过的最E的存在之一。我与她的接触不算多，但就与异性的相处而言，应该算是较多的一类，因为我实在很少和异性接触，除了极个别相处起来与同性无异的以外（与我相处皆是如此，与他人相比可以想象肯定亦是）。杨靖菲肯定算是这“极个别”中的一位，事实上，无论性别，成绩，性格，她都能与之交流，并给人留下美好的印象，所以尽管在刚入学时，我并未将她划归为班级里最漂亮的那一位，也还是很快就喜欢上了这样的女孩子。</p>
+<p>具体的很多事情已经记不清了，印象最深的就是六年级时黄启亮找我希望我帮助他“夺权”杨靖菲，应该是不满意于自己副班长的地位。这样的事情现在想不免令人发笑，甚至在当时我也只是表面上点头，心里暗自思考这样做既毫无意义，又不利于同学关系。但根据后来我对黄启亮的了解，他愿意这样做的原因无非有二：其一为自己膨胀的权力欲望，他对于权力是一个很执着的人，直到上了大学也依旧保持对权力的疯狂追求，直到后面可能是被刚伤了，才选择收敛起来锋芒，但还是时不时地炫耀自已可以暗中操控学生会的一些事务；其二为黄启亮的自尊心，以我看来，他对于男女关系中男方的要求要明显更高一些，所以不太能够接受女方比自己地位更高或者是更优秀之类的，虽然杨靖菲直到最后都没表露出对黄启亮的一丝一毫的兴趣，但作为追求者的一方，黄启亮显然不能允许自己落入下乘。</p>
+<p>总而言之，因为或多或少我猜到或没猜到的原因，黄启亮十分热烈地开展了“夺权”活动，我虽无意掺和，但也不好拒绝，毕竟私交不错，于是就象征性地帮忙问了几个人，没想到问道李超洋的时候，出现了纰漏。因为他与杨靖菲关系很好（现在看来，应该是单方面的喜欢），于是就向杨靖菲告密了此行为，作为中间方的我便受到了巨大的诘难。我被看作是暗地里搞破坏的小人，在食堂里被怒火上脑的杨靖菲怒斥了一顿。我感觉很委屈，但是我当时也不是什么好脾气的人，遂与之大吵一架，最后闹得不欢而散。</p>
+<p>但是这件事情并没有结束，在后面误会澄清之后，她在早读前单独把我约到操场上主动给我道歉，这样的事情我现在都做不出来（太内向了），属实是杨同学非常具有个人魅力的呈现。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2025 My Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Mark. Z.
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
