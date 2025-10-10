@@ -40,6 +40,8 @@
 
 
 
+<script src="/myblog.github.io/js/lib/search.js"></script>
+
 
 
 <link rel="stylesheet" href="/myblog.github.io/css/main.css" />
@@ -139,6 +141,8 @@
             
 <div id="archives">
     
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
+    
     <div id="timeline-wrap" ref="timeline">
         
         <div class="timeline" data-title="浮生一梦|第一辑">
@@ -168,14 +172,14 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #00a596">
+                            <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #ffa2c4">
                                 回忆
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #03a9f4">
+                            <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #00bcd4">
                                 浮生一梦
                             </a>
                         </span>
@@ -213,21 +217,21 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">
+                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ffa2c4">
                                 学业生活
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ffa2c4">
+                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #03a9f4">
                                 日志
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00bcd4">
+                            <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00a596">
                                 流年碎影
                             </a>
                         </span>
@@ -265,14 +269,14 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #ffa2c4">
+                            <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #ff7d73">
                                 回忆
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #00a596">
+                            <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #ffa2c4">
                                 浮生一梦
                             </a>
                         </span>
@@ -310,14 +314,14 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ffa2c4">
+                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00a596">
                                 学业生活
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #03a9f4">
+                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ff7d73">
                                 日志
                             </a>
                         </span>
@@ -362,14 +366,14 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #00bcd4">
+                            <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #ffa2c4">
                                 回忆
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #00a596">
+                            <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #03a9f4">
                                 浮生一梦
                             </a>
                         </span>
@@ -407,21 +411,21 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ffa2c4">
+                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00a596">
                                 学业生活
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #03a9f4">
+                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ff7d73">
                                 日志
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00bcd4">
+                            <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ffa2c4">
                                 流年碎影
                             </a>
                         </span>
@@ -459,21 +463,21 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ffa2c4">
+                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #03a9f4">
                                 学业生活
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00a596">
+                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00bcd4">
                                 日志
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00bcd4">
+                            <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ff7d73">
                                 流年碎影
                             </a>
                         </span>
@@ -511,14 +515,14 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #ffa2c4">
+                            <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #00a596">
                                 回忆
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #00bcd4">
+                            <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #03a9f4">
                                 浮生一梦
                             </a>
                         </span>
@@ -556,21 +560,21 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #03a9f4">
+                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ffa2c4">
                                 学业生活
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00bcd4">
+                            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #03a9f4">
                                 日志
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ffa2c4">
+                            <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ff7d73">
                                 流年碎影
                             </a>
                         </span>
@@ -608,7 +612,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">
+                            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00a596">
                                 学业生活
                             </a>
                         </span>
