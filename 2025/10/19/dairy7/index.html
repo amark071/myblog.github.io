@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>流年碎影｜我的20251019 | My Blog</title>
+    <meta name="author" content="Mark. Z." />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/myblog.github.io/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/myblog.github.io/js/lib/highlight.js"></script>
+
+
+
+<script src="/myblog.github.io/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/myblog.github.io/css/main.css" />
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/myblog.github.io/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/myblog.github.io/">
+            <span>MY BLOG</span>
+        </a>
+        
+        <a href="/myblog.github.io/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/myblog.github.io/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/myblog.github.io/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/myblog.github.io/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MY BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/myblog.github.io/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>流年碎影｜我的20251019</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/10/19
+        </span>
+        
+        <span class="category">
+            <a href="/myblog.github.io/categories/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                流年碎影
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">
+                    学业生活
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ffa2c4">
+                    日志
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ff7d73">
+                    流年碎影
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p><strong>路漫漫其修远兮，吾将上下而求索。共勉</strong></p>
+<span id="more"></span>
+
+<h4 id="生活新声"><a href="#生活新声" class="headerlink" title="生活新声"></a>生活新声</h4><ul>
+<li>最近尝试了两天早睡早起的生活，感觉很合适，遂决定从头开始制定一款生活计划。</li>
+</ul>
+<h5 id="起居"><a href="#起居" class="headerlink" title="起居"></a>起居</h5><ul>
+<li>熄灯时间：22：30-23：00，最晚不得低于23：30</li>
+<li>起床时间：6：30</li>
+<li>每日常规：起床、洗漱并烧一壶水、泡茶、回家后洗杯子、根据情况洗衣、洗澡、睡觉</li>
+<li>周末：打扫一次卫生、整理环境</li>
+</ul>
+<h5 id="饮食"><a href="#饮食" class="headerlink" title="饮食"></a>饮食</h5><ul>
+<li><p>较为严格的按照以下标准执行，争取在5~6个月减重到75kg，并具备正常的体态。</p>
+</li>
+<li><p>早餐：44g碳水+23g蛋白质（馒头1+牛奶1+鸡蛋2+小蔬菜一份）</p>
+</li>
+<li><p>午餐：44g碳水+34g蛋白质（米饭1.2两+家常瘦肉菜一份+蔬菜一份）</p>
+</li>
+<li><p>晚餐</p>
+<ul>
+<li><p>练前：垫一份33g碳水（约1两饭+蔬菜一份&#x2F;或用八宝粥）</p>
+</li>
+<li><p>练后：77g碳水+34g蛋白质（米饭2两+瘦肉一份+蔬菜一份）</p>
+</li>
+<li><p>不练：早餐保持一致，中午70.4+34（米饭1.2两+水果（苹果15）+家常瘦肉菜一份+蔬菜一份），晚上44+34（米饭1.2两+家常瘦肉菜一份+蔬菜一份）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="饮水"><a href="#饮水" class="headerlink" title="饮水"></a>饮水</h5><ul>
+<li>茶水至少喝3杯，时间点：上午1.5+中午0.5+下午1</li>
+<li>水：早上起床1杯，晚上根据整日喝水情况摄入约500-800ml（补足2L）</li>
+<li>咖啡：只喝美式或者无糖拿铁1</li>
+</ul>
+<h5 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h5><ul>
+<li>平均每周练要3-5次</li>
+<li>根据疲劳度来酌情增减，一次训练总时长一般1-1.5小时</li>
+<li>大部分时候选择能做8-12次重复的配重，适应新动作可以选择能做12-15次重复的配重</li>
+<li>可能砸伤的动作（自由深蹲&#x2F;卧推&#x2F;推举）不要做到力竭，提前1-2个停止以确保安全；其余无危险动作可以做到力竭，做不动了就放下</li>
+<li>胸&#x2F;背&#x2F;臀腿的组间休息2-3分钟（臀腿可以更长一点），肩膀&#x2F;手臂的组间休息1.5-2分钟，可自行酌调，但最少也不应低于1.5分钟</li>
+</ul>
+<p><img src="/myblog.github.io/images/20251019_1.jpg" alt="DAY1"></p>
+<p><img src="/myblog.github.io/images/20251019_2.jpg" alt="DAY2"></p>
+<p><img src="/myblog.github.io/images/20251019_3.jpg" alt="DAY3"></p>
+<h5 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h5><ul>
+<li>按照规矩：从早饭之后一直到晚上六点左右，预计6~8小时，晚饭锻炼后看精力酌情继续</li>
+</ul>
+<h5 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h5><ul>
+<li>合理安排</li>
+</ul>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2025 My Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Mark. Z.
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/myblog.github.io/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

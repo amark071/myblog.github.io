@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>浮生一梦 | 毕业辑 | My Blog</title>
+    <meta name="author" content="Mark. Z." />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/myblog.github.io/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/myblog.github.io/js/lib/highlight.js"></script>
+
+
+
+<script src="/myblog.github.io/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/myblog.github.io/css/main.css" />
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/myblog.github.io/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/myblog.github.io/">
+            <span>MY BLOG</span>
+        </a>
+        
+        <a href="/myblog.github.io/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/myblog.github.io/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/myblog.github.io/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/myblog.github.io/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MY BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/myblog.github.io/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>浮生一梦 | 毕业辑</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/26
+        </span>
+        
+        <span class="category">
+            <a href="/myblog.github.io/categories/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                浮生一梦
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #03a9f4">
+                    回忆
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #ffa2c4">
+                    浮生一梦
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p><strong>蹉跎四年岁月，八度春秋风雨，愿心底仍然有梦</strong></p>
+<span id="more"></span>
+
+<p>终于是到了离开的日子，匆匆忙忙十六年的求学生涯又将迎来新的阶段，于是在这与旧日告别的一天理所应当地没有睡着。</p>
+<p>好久没有写过东西了，其实我从小有着超乎常人的写作欲望，小学的时候看了小说自己照着类似的版式再发挥点想象力自己创作，一直到初中写了好几本的开头最后都因为懒惰而断更了，甚至还向起点中文网投了一本，理所应当地被拒稿了，我记得当时还专门把投稿的内容删了，写了一篇一千来字的文章把编辑的鼠目寸光狠狠批判了一番。上了高中之后，写作的东西逐渐转为了日记和一篇自传，高考完了数了数，带上初三四年的日记零零散散也写了七十多篇，自传也写了两万多字。本想着趁着还年轻记忆力还在线，上大学的时候快点把很多事情记录下来，但整个大学因为或者忙碌或者焦虑等各种各样的原因，除了各种水或者不算水的论文，关于我自己的内容却也没写两笔，上一次写日志还是去年的11月，如今又是大半年过去了，终于能在这离别的日子借着这失眠的东风来好好想想过去四年的得失。</p>
+<p>所幸，我的大学生活在我看来还比较简单纯粹，无非就是自己和自己抗争的故事。早在大一的时候，我就因为基础课的连续低分（或是失误，或是不幸，或是根本没学明白）对绩点失去了兴趣，甚至对习惯了十多年的考试不再是感到麻木，而是终于产生了想要逃离的想法，于是我便任性起来：选了的课不退、给分不好的也选，主打一个生冷不忌，选课的目的也只有两个：毕业要修或者是我自己想学。在这样可以看做是对成绩彻底摆烂后，我的绩点在大部分时候都还在慢慢上升，但又常常因为踩中所谓雷区出现暴跌（此处点名批评复变函数，给我刚伤完了）。</p>
+<p>虽然对成绩可以做到无视，但对于未来的焦虑确实是难以避免的，我在无数个夜晚都在思考像我这样看似无解的情况应该怎么去突破，卷绩点对于我本人而言是一件不愉快，性价比又低还比较看脸的事情，很多课程的考核难度在我看来都是在挑战我天赋的上限，我在答完卷之后只感到再学一个学期也答不出来的无力。但幸运的是，我遇到了胡老师，愿意不看成绩让我去参与到实习中，帮我锻炼我在考试之外的能力。在大数据院的实习中，我掌握的基础能力也就是计算机公共课程所学到东西和一节关于计算数学的导论性质的课程所讲述的内容。但运气好的是，我遇到了震哥和茂哥，他们不仅带着我从最基础的东西开始做开始学，还教会我学会静下来去debug。我最初遇到无法解决的问题很容易红温，常常急得我浑身发热，根本没办法再进行下去，但和震哥和茂哥交流过几次后，我也习惯了慢下来去思考，去一步步拆解并解决问题。后面的日子慢慢好起来也忙碌起来了，直到大三的时候我的生活也步入正轨，每天按部就班的上课、学习、工作以及应付各种各样的事务，到大三下学期我开始为前途考虑去信科联系了杨老师跟着做本研，后面就是简单地写论文、被resubmit、投新一轮、被接收，我对此感到抱歉的是最开始和杨老师说好了到他那里读研，但最后因为各种原因没有去成还是选择留在了数院。一直到大四，同时做着好几份工作，和不同方向的老师、师兄、前辈交流，自己也带过了刚入行什么都不懂的师弟，才发现写代码像我一样容易红温的人确实很少😂。</p>
+<p>回头看来，四年的时间眨眼间就过去了，虽然现在能够笑着聊这些往事，但个中艰辛与痛苦却也只有自己能体会。我从初中开始就养成了一个不算很好的习惯，我会在每天晚上睡觉前琢磨自己今天的得失，以及思考有没有办法做的更好。这种“吾日三省吾身”的精神本也不错，但在睡觉前进行却也带来了更多的困扰，如果当天没发生什么事情还好，但如果我在某件事情上处理地不好或者表达地不够得体，即使我清楚地知道可能对于旁人某些事情第二天就想不起来了，我也会难受地难以入睡。长此以往的思考也让我对外人变得苛刻起来，我开始变得懒惰与厌蠢，我讨厌同一张口就让人感到愚蠢的人解释太多，厌恶拉着假脸做表面社交，除了需要处理必要的事务和偶尔心情愉悦的时候外，我开始拒绝扩大我的交际圈，而是把更多的时间花在思考和探索上。</p>
+<p>我明白自身有许多缺点，整个本科四年过的僵硬又消极、固执又自负，但这就是我，最真实的我。“我应该成为一个怎样的个体？”这是我思考过无数次的问题，大部分时候都得不出答案，最后也就告诉自己：跟着感觉走。是的，跟着感觉走，做最真实的自己，不必担心太多，就这样走下去。有太多的问题我想不出答案，可能也不存在所谓的最优解，有太多的为问题与挫折需要面对，但生活总得继续，就像暴风雨后，重新扎根的种子一样，尽管满身泥泞，仍要努力生长。回头再看自己写的这一长串，总觉着功力有所减退，有些词不达意，这何尝不是一种真实的写照？生活中有太多的难题没有答案，就像大学里有太多的目标未曾实现，但正是这些不完美，才让我们不断前行。或许，成长本身就是这样一个过程：在遗憾中寻找意义，在不完美中追求进步。不必苛求每一句话都精准无误，每一次尝试都尽善尽美，重要的是，我们始终在努力，始终在书写属于自己的故事。</p>
+<p>就写到这儿吧，天亮了，该出发了。	</p>
+<p>二〇二五年七月三日与燕园</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2025 My Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Mark. Z.
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/myblog.github.io/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
