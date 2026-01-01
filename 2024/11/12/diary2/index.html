@@ -44,6 +44,9 @@
 <script src="/myblog.github.io/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
+
 
 
 
@@ -175,7 +178,7 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ffa2c4">
+                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00a596">
                     学业生活
                 </a>
             </span>
@@ -189,7 +192,7 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00a596">
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ffa2c4">
                     流年碎影
                 </a>
             </span>
@@ -198,38 +201,22 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <p><strong>路漫漫其修远兮，吾将上下而求索。共勉</strong></p>
-<span id="more"></span>
-
-<h4 id="闲言碎语"><a href="#闲言碎语" class="headerlink" title="闲言碎语"></a>闲言碎语</h4><ul>
-<li>今天是记录日志的第二天，其实和记录日志的第一天相比已经过去了两天（相当于中间漏掉了一天没有记录）。原因很简单——昨天是pde考试复习的关键阶段，是在难以停下脚步来进行日志的记录，但是更直接的原因是晚上和老王一起复习，最后在八点过的时候去操场刷了一点儿里程，所以最后到寝室的时候已经10点过了，当时甚至连热方程的一些解都还没认真算过，所以最后就索性放弃记录了。</li>
-<li>鉴于早上八点考pde，今天起床时间被提早到了7点，比这学期的平均起床时间要早3个小时左右，所以出现了严重的生理反应，考试的时候还好，考完之后到下午3点钟肉眼可见的变萎了，一直到晚上才勉强缓过来，但肌肉还是有点酸痛，难以维持长时间的工作形态。</li>
-</ul>
-<h4 id="学习进度"><a href="#学习进度" class="headerlink" title="学习进度"></a>学习进度</h4><ul>
-<li>今天也是迎来pde期中考试，根据安排，我在11月10日完成了教材知识点和定理的全部复习内容，在11月11日完成了教材习题的复习，做了一套往年题并且吸收了他人的学习理解，最后基本是做到了比较完全的复习</li>
-<li>考试的内容非常友善，除了3（2）有些不确定，剩下的题都是很快就有思路并且顺利完成解答 </li>
-<li>第2题是作业原题，但找刚王抄了答案之后没有复习，导致考试的时候没做出来😆</li>
-<li>有人在树洞上发了原题回忆版，贴在下面：<br><img src="/myblog.github.io/images/20241112_1.jpg" alt="期中试题-2024pde"></li>
-</ul>
-<h4 id="短期规划与任务"><a href="#短期规划与任务" class="headerlink" title="短期规划与任务"></a>短期规划与任务</h4><ul>
-<li>剩下的很多事情：<ul>
-<li>学习：PDE，数理逻辑上周课程的回放，随机模拟方法的从lect5开始学习。（时间安排：周三&#x2F;四）</li>
-<li>实习&#x2F;毕业论文：周一开会（下午15-18点），阅读文献与代码（时间安排：周二&#x2F;五&#x2F;日）</li>
-<li>周四安排有一个会议，并且会议结束后有12min跑步的测试（时间安排：周四）</li>
-<li>党内部的学习小组安排（先统计时间，然后安排学习任务）  </li>
-<li>发展预备党员的调查工作</li>
-</ul>
-</li>
-</ul>
-<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><ul>
-<li>消费：¥41</li>
-<li>早饭：茶+巧克力（¥13.5）</li>
-<li>午饭：鲜烧牛肉饭+快乐水（¥27.5）</li>
-<li>中午狠狠睡了一个小时，准确的说是下午，但是晚上还是很困🥱</li>
-</ul>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        
+        data-encrypted="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"
+        data-shasum="763564c30f45070662200a4e242a3743188f41afc35f7ddf9469491debce7ee0"
+            
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
@@ -243,7 +230,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2024 - 2025 My Blog
+            2024 - 2026 My Blog
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>

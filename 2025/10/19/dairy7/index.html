@@ -44,6 +44,9 @@
 <script src="/myblog.github.io/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
+
 
 
 
@@ -182,14 +185,14 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00a596">
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ff7d73">
                     日志
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00bcd4">
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ffa2c4">
                     流年碎影
                 </a>
             </span>
@@ -198,60 +201,22 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <p><strong>路漫漫其修远兮，吾将上下而求索。共勉</strong></p>
-<span id="more"></span>
-
-<h4 id="生活新声"><a href="#生活新声" class="headerlink" title="生活新声"></a>生活新声</h4><ul>
-<li>最近尝试了两天早睡早起的生活，感觉很合适，遂决定从头开始制定一款生活计划。</li>
-</ul>
-<h5 id="起居"><a href="#起居" class="headerlink" title="起居"></a>起居</h5><ul>
-<li>熄灯时间：22：30-23：00，最晚不得低于23：30</li>
-<li>起床时间：6：30</li>
-<li>每日常规：起床、洗漱并烧一壶水、泡茶、回家后洗杯子、根据情况洗衣、洗澡、睡觉</li>
-<li>周末：打扫一次卫生、整理环境</li>
-</ul>
-<h5 id="饮食"><a href="#饮食" class="headerlink" title="饮食"></a>饮食</h5><ul>
-<li><p>较为严格的按照以下标准执行，争取在5~6个月减重到75kg，并具备正常的体态。</p>
-</li>
-<li><p>早餐：44g碳水+23g蛋白质（馒头1+牛奶1+鸡蛋2+小蔬菜一份）</p>
-</li>
-<li><p>午餐：44g碳水+34g蛋白质（米饭1.2两+家常瘦肉菜一份+蔬菜一份）</p>
-</li>
-<li><p>晚餐</p>
-<ul>
-<li><p>练前：垫一份33g碳水（约1两饭+蔬菜一份&#x2F;或用八宝粥）</p>
-</li>
-<li><p>练后：77g碳水+34g蛋白质（米饭2两+瘦肉一份+蔬菜一份）</p>
-</li>
-<li><p>不练：早餐保持一致，中午70.4+34（米饭1.2两+水果（苹果15）+家常瘦肉菜一份+蔬菜一份），晚上44+34（米饭1.2两+家常瘦肉菜一份+蔬菜一份）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="饮水"><a href="#饮水" class="headerlink" title="饮水"></a>饮水</h5><ul>
-<li>茶水至少喝3杯，时间点：上午1.5+中午0.5+下午1</li>
-<li>水：早上起床1杯，晚上根据整日喝水情况摄入约500-800ml（补足2L）</li>
-<li>咖啡：只喝美式或者无糖拿铁1</li>
-</ul>
-<h5 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h5><ul>
-<li>平均每周练要3-5次</li>
-<li>根据疲劳度来酌情增减，一次训练总时长一般1-1.5小时</li>
-<li>大部分时候选择能做8-12次重复的配重，适应新动作可以选择能做12-15次重复的配重</li>
-<li>可能砸伤的动作（自由深蹲&#x2F;卧推&#x2F;推举）不要做到力竭，提前1-2个停止以确保安全；其余无危险动作可以做到力竭，做不动了就放下</li>
-<li>胸&#x2F;背&#x2F;臀腿的组间休息2-3分钟（臀腿可以更长一点），肩膀&#x2F;手臂的组间休息1.5-2分钟，可自行酌调，但最少也不应低于1.5分钟</li>
-</ul>
-<p><img src="/myblog.github.io/images/20251019_1.jpg" alt="DAY1"></p>
-<p><img src="/myblog.github.io/images/20251019_2.jpg" alt="DAY2"></p>
-<p><img src="/myblog.github.io/images/20251019_3.jpg" alt="DAY3"></p>
-<h5 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h5><ul>
-<li>按照规矩：从早饭之后一直到晚上六点左右，预计6~8小时，晚饭锻炼后看精力酌情继续</li>
-</ul>
-<h5 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h5><ul>
-<li>合理安排</li>
-</ul>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        
+        data-encrypted="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"
+        data-shasum="6857c0dd471da6bea65fae9902b094b17bb6c9d505f8626e07c05a0f8dfa3a9c"
+            
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
@@ -265,7 +230,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2024 - 2025 My Blog
+            2024 - 2026 My Blog
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>

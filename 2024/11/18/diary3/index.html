@@ -44,6 +44,9 @@
 <script src="/myblog.github.io/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
+
 
 
 
@@ -175,21 +178,21 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00a596">
+                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">
                     学业生活
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00bcd4">
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ffa2c4">
                     日志
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00a596">
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00bcd4">
                     流年碎影
                 </a>
             </span>
@@ -198,36 +201,22 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <p><strong>路漫漫其修远兮，吾将上下而求索。共勉</strong></p>
-<span id="more"></span>
-
-<h4 id="闲言碎语"><a href="#闲言碎语" class="headerlink" title="闲言碎语"></a>闲言碎语</h4><ul>
-<li>考完pde之后放纵了很久，罪过罪过。</li>
-<li>周末过的挺愉快的，先是周六去科技馆逛了一圈，没想到科技馆在鸟巢边边上，已经记不起六年级那次来北京的时候去过没有，但以我这个岁数再去逛确实没有什么意思了，里面唯一有点想法的人工智能板块也是模糊不清，啥也没讲，反倒是和机器人这种东西混杂在一起。</li>
-<li>周日和师兄还有实习生们一起吃了一顿饭，在场只有我一个本科生，剩下的最大的都已经要博士毕业了，而且感觉大家不是力学系的就是数学系里纯做有限元研究的，反而我是最不对口的，但工作也给我安排到了编译求解器上面，也算是偏向于计算机知识的部分，今天开了个小会，感觉有点难顶。</li>
-</ul>
-<h4 id="学习进度"><a href="#学习进度" class="headerlink" title="学习进度"></a>学习进度</h4><ul>
-<li>今天首先是在下午开了一个小会，讲了一下求解器编译的一些基础工作，我大概听懂了一些，这还是建立在我曾经被cmake折磨了很久所以对这个有一定了解的情况下，另一个老哥跟我一样大，但是看他的简历之前似乎都是搞得有限元工作，甚至是还在用matlab，不知道这方面能力如何</li>
-<li>今天下午睡觉之后又继续开始了pde的学习，因为期中考试集中复习了一手pde，所以捡起来比较快，成就感会更加强烈一点，所以选择了pde开始学习，把热方程的混合问题求解，极值原理和最大模估计学习了一部分，期中最大模估计的后两个证明没细看，因为要退房了，所以准备明天上课的时候阅读一下，同时明天有可能pde会出成绩，所以还是准备去上一下课，看看老王考了多少👀。</li>
-</ul>
-<h4 id="短期规划与任务"><a href="#短期规划与任务" class="headerlink" title="短期规划与任务"></a>短期规划与任务</h4><ul>
-<li>剩下的很多事情：<ul>
-<li>学习：数理逻辑从断点开始（忘的差不多了），随机模拟方法的从lect5开始学习。（时间安排：周二&#x2F;四）</li>
-<li>实习&#x2F;毕业论文：周一开会（下午13-14点），阅读文献与代码（时间安排：周三&#x2F;五&#x2F;六）</li>
-<li>党内部的学习小组安排：周二开始在群内统计时间  </li>
-<li>发展预备党员的调查工作<ul>
-<li>只有老师和一个同学回了我，今晚回去➕剩下几个同学的微信，快速把这件事情解决了</li>
-<li>另外还有一个推荐人的事，但是得等他们把表搞好了再说</li>
-</ul>
-</li>
-<li>体育跑步：要抓紧了，ddl在12月8日</li>
-</ul>
-</li>
-</ul>
-<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><p> <img src="/myblog.github.io/images/20241118_1.jpg" alt="科技馆"><br> <img src="/myblog.github.io/images/20241118_2.jpg" alt="从科技馆出来就到了奥林匹克体育场"><br> <img src="/myblog.github.io/images/20241118_3.jpg" alt="新买的折叠桌，亲手拼装好"></p>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        
+        data-encrypted="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"
+        data-shasum="a5c1c19b86939b94be988844237756904e761defafbe4619e502f6a0cde7b025"
+            
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
@@ -241,7 +230,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2024 - 2025 My Blog
+            2024 - 2026 My Blog
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>

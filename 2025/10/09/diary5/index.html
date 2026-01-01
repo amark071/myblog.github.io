@@ -44,6 +44,9 @@
 <script src="/myblog.github.io/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
+
 
 
 
@@ -182,14 +185,14 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ff7d73">
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00a596">
                     日志
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00a596">
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ffa2c4">
                     流年碎影
                 </a>
             </span>
@@ -198,39 +201,22 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <p><strong>路漫漫其修远兮，吾将上下而求索。共勉</strong></p>
-<span id="more"></span>
-
-<h4 id="闲言碎语"><a href="#闲言碎语" class="headerlink" title="闲言碎语"></a>闲言碎语</h4><ul>
-<li>我真幸运，因为鸽了好多年的丝之歌终于发售了，我在发售后观望了两个星期，网上的风评主要是难度比较高，比较坐牢，但对于我而言，有挑战是远远好过没什么难度的，因为我本身不在意游戏时的剧情，最在意的就是战斗系统的设计，于是迫不及待地拿下，并花了五十多个小时将一个存档能挖掘的东西全部挖干净了。</li>
-<li>我真不幸，因为最近一个星期沉迷于丝之歌的缘故，我翘掉了五节课，并处在了一种颓废的状态中茫然度日。这不能再持续下去了！我必须马上开始写日志，督促自己恢复到正常的学习生活中来。</li>
-<li>今天起的比较晚，但方便的是直接走到学校吃个午饭，但图书馆竟然关门了，只能来到博雅学堂进行一波三连预约，从11点班肝到了3点半，中间几乎没什么休息时间，感到甚是疲惫，于是写篇日志聊以消遣。</li>
-</ul>
-<h4 id="学习进度"><a href="#学习进度" class="headerlink" title="学习进度"></a>学习进度</h4><ul>
-<li>今天列出了整体差的ddl，并完成了以下事情<ul>
-<li>完成了统计计算的作业，两道代码题</li>
-<li>完成了机器学习作业、分布式计算作业的再检查</li>
-<li>完成了一节分布式计算的网课（其实没怎么听，因为老师讲的东西没什么用）</li>
-</ul>
-</li>
-</ul>
-<h4 id="短期规划与任务"><a href="#短期规划与任务" class="headerlink" title="短期规划与任务"></a>短期规划与任务</h4><ul>
-<li>明后日安排：先把计算机基础的作业写完了；然后开始看四节回放，顺序：两节计算机基础–深度学习–统计计算PPT（自学教案即可）</li>
-<li>还剩下的很多事情：<ul>
-<li>备课：在完成所有的DDL后，争取每天给妹备一节课，用作休息时间</li>
-<li>实习：目前没有实习任务，下周找胡老师商量下关于我的安排</li>
-<li>自主学习：阅读西瓜书，争取国庆期间干完3章吧，然后看transformer的小视频和论文</li>
-<li>养成良好习惯：慢慢开始增加学习时间，大概适应后，开始进行锻炼。</li>
-</ul>
-</li>
-</ul>
-<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><ul>
-<li>消费</li>
-<li>午餐：木桶鸡肉饭：￥12，真好吃啊</li>
-</ul>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        
+        data-encrypted="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"
+        data-shasum="9b211bfbaf85493310a302073f25b5cf8d79769c46538c3f20e22aeb19543089"
+            
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
@@ -244,7 +230,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2024 - 2025 My Blog
+            2024 - 2026 My Blog
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>

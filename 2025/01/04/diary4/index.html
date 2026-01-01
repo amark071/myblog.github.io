@@ -44,6 +44,9 @@
 <script src="/myblog.github.io/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
+
 
 
 
@@ -175,21 +178,21 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ffa2c4">
+                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">
                     学业生活
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00a596">
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #03a9f4">
                     日志
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00bcd4">
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ff7d73">
                     流年碎影
                 </a>
             </span>
@@ -198,33 +201,22 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <p><strong>路漫漫其修远兮，吾将上下而求索。共勉</strong></p>
-<span id="more"></span>
-
-<h4 id="闲言碎语"><a href="#闲言碎语" class="headerlink" title="闲言碎语"></a>闲言碎语</h4><ul>
-<li>今天考完了随机模拟方法。随机模拟方法可以说是这个学期最难学最硬的一门课程了，今天考完之后也是松了一大口气。</li>
-<li>其实虽然今天考试的感觉还不错，但我感觉我对这门课程的理解还处在一种似懂非懂，甚是玄妙的阶段。牢王给我发了一份复习资料，包括了众多往年题目和一些解答，让我得以窥见李铁军老师在命期末试题的时候的一些规律。再加上李铁军老师在最后一节课答疑的时候回答同学们关于往年题的疑问的时候，更是连连摆手说不能发布往年提，否则就难以出题了，于是我便将最后的复习重点全部放在了往年题身上，最后果然，考察的知识点重合度很高。</li>
-<li>第一题是每年必考，且基本没有改变的叙述Metropolis算法和KMC算法，这个基本上你知道要考就没有任何难度。但是有的老哥显然没有这方面的情报，于是尽管他可能学的很好，在让默写KMC算法的时候还是完全没有影响具体的算法细节。</li>
-<li>第二题更是经典考题：解SDE，可以说这门课程就是为了解决这个SDE的解法而包的这盘饺子。我在复习的时候，熟练的背下了Ito积分的公式、学会了基本解法之后我就觉得这个题目如果是一维的，再难也难不到哪儿去，结果考试就给了我当头一棒，出了一个巨难的构造，而且还和给的例题不同，它的二次项消不掉，导致我花了一个小时才构造出来，形式是：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false">(</mo><msup><mi>e</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mi>t</mi><mo stretchy="false">)</mo><msqrt><msub><mi>X</mi><mi>t</mi></msub></msqrt></mrow><annotation encoding="application/x-tex">d(e^{\frac{1}{2}}t)\sqrt{X_t}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.204em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.954em;"><span style="top:-3.363em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8517em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.8117em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
-c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
-c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
-c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
-s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
-c69,-144,104.5,-217.7,106.5,-221
-l0 -0
-c5.3,-9.3,12,-14,20,-14
-H400000v40H845.2724
-s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
-c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
-M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1883em;"><span></span></span></span></span></span></span></span></span>，这个东西还要求得微分，最后还要比较答案，着实有点为难。</li>
-<li>第三题、第四题我都没什么把握，不过感觉也做的还行，应该能拿一部分分，反正60分就是胜利。</li>
-</ul>
-<h4 id="短期规划与任务"><a href="#短期规划与任务" class="headerlink" title="短期规划与任务"></a>短期规划与任务</h4><ul>
-<li>没什么好说的，6号考数理逻辑，7号考PDE，安排明天复习数理逻辑得往年题，后天考完数理逻辑之后复习PDE的各种方程的解法。因为考试任务还比较重，所以就不写太多了。</li>
-</ul>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        
+        data-encrypted="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"
+        data-shasum="0355f757a7e6e767c152570e7e64be024cf3102cf4422cb24d28f76ab0a22cb6"
+            
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
@@ -238,7 +230,7 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">�
     <div id="footer-wrap">
         <div>
             &copy;
-            2024 - 2025 My Blog
+            2024 - 2026 My Blog
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>

@@ -44,6 +44,9 @@
 <script src="/myblog.github.io/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
+
 
 
 
@@ -175,14 +178,14 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #00a596">
+                <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="color: #ff7d73">
                     回忆
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #00bcd4">
+                <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="color: #03a9f4">
                     浮生一梦
                 </a>
             </span>
@@ -191,20 +194,22 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <p><strong>蹉跎四年岁月，八度春秋风雨，愿心底仍然有梦</strong></p>
-<span id="more"></span>
-
-<p>终于是到了离开的日子，匆匆忙忙十六年的求学生涯又将迎来新的阶段，于是在这与旧日告别的一天理所应当地没有睡着。</p>
-<p>好久没有写过东西了，其实我从小有着超乎常人的写作欲望，小学的时候看了小说自己照着类似的版式再发挥点想象力自己创作，一直到初中写了好几本的开头最后都因为懒惰而断更了，甚至还向起点中文网投了一本，理所应当地被拒稿了，我记得当时还专门把投稿的内容删了，写了一篇一千来字的文章把编辑的鼠目寸光狠狠批判了一番。上了高中之后，写作的东西逐渐转为了日记和一篇自传，高考完了数了数，带上初三四年的日记零零散散也写了七十多篇，自传也写了两万多字。本想着趁着还年轻记忆力还在线，上大学的时候快点把很多事情记录下来，但整个大学因为或者忙碌或者焦虑等各种各样的原因，除了各种水或者不算水的论文，关于我自己的内容却也没写两笔，上一次写日志还是去年的11月，如今又是大半年过去了，终于能在这离别的日子借着这失眠的东风来好好想想过去四年的得失。</p>
-<p>所幸，我的大学生活在我看来还比较简单纯粹，无非就是自己和自己抗争的故事。早在大一的时候，我就因为基础课的连续低分（或是失误，或是不幸，或是根本没学明白）对绩点失去了兴趣，甚至对习惯了十多年的考试不再是感到麻木，而是终于产生了想要逃离的想法，于是我便任性起来：选了的课不退、给分不好的也选，主打一个生冷不忌，选课的目的也只有两个：毕业要修或者是我自己想学。在这样可以看做是对成绩彻底摆烂后，我的绩点在大部分时候都还在慢慢上升，但又常常因为踩中所谓雷区出现暴跌（此处点名批评复变函数，给我刚伤完了）。</p>
-<p>虽然对成绩可以做到无视，但对于未来的焦虑确实是难以避免的，我在无数个夜晚都在思考像我这样看似无解的情况应该怎么去突破，卷绩点对于我本人而言是一件不愉快，性价比又低还比较看脸的事情，很多课程的考核难度在我看来都是在挑战我天赋的上限，我在答完卷之后只感到再学一个学期也答不出来的无力。但幸运的是，我遇到了胡老师，愿意不看成绩让我去参与到实习中，帮我锻炼我在考试之外的能力。在大数据院的实习中，我掌握的基础能力也就是计算机公共课程所学到东西和一节关于计算数学的导论性质的课程所讲述的内容。但运气好的是，我遇到了震哥和茂哥，他们不仅带着我从最基础的东西开始做开始学，还教会我学会静下来去debug。我最初遇到无法解决的问题很容易红温，常常急得我浑身发热，根本没办法再进行下去，但和震哥和茂哥交流过几次后，我也习惯了慢下来去思考，去一步步拆解并解决问题。后面的日子慢慢好起来也忙碌起来了，直到大三的时候我的生活也步入正轨，每天按部就班的上课、学习、工作以及应付各种各样的事务，到大三下学期我开始为前途考虑去信科联系了杨老师跟着做本研，后面就是简单地写论文、被resubmit、投新一轮、被接收，我对此感到抱歉的是最开始和杨老师说好了到他那里读研，但最后因为各种原因没有去成还是选择留在了数院。一直到大四，同时做着好几份工作，和不同方向的老师、师兄、前辈交流，自己也带过了刚入行什么都不懂的师弟，才发现写代码像我一样容易红温的人确实很少😂。</p>
-<p>回头看来，四年的时间眨眼间就过去了，虽然现在能够笑着聊这些往事，但个中艰辛与痛苦却也只有自己能体会。我从初中开始就养成了一个不算很好的习惯，我会在每天晚上睡觉前琢磨自己今天的得失，以及思考有没有办法做的更好。这种“吾日三省吾身”的精神本也不错，但在睡觉前进行却也带来了更多的困扰，如果当天没发生什么事情还好，但如果我在某件事情上处理地不好或者表达地不够得体，即使我清楚地知道可能对于旁人某些事情第二天就想不起来了，我也会难受地难以入睡。长此以往的思考也让我对外人变得苛刻起来，我开始变得懒惰与厌蠢，我讨厌同一张口就让人感到愚蠢的人解释太多，厌恶拉着假脸做表面社交，除了需要处理必要的事务和偶尔心情愉悦的时候外，我开始拒绝扩大我的交际圈，而是把更多的时间花在思考和探索上。</p>
-<p>我明白自身有许多缺点，整个本科四年过的僵硬又消极、固执又自负，但这就是我，最真实的我。“我应该成为一个怎样的个体？”这是我思考过无数次的问题，大部分时候都得不出答案，最后也就告诉自己：跟着感觉走。是的，跟着感觉走，做最真实的自己，不必担心太多，就这样走下去。有太多的问题我想不出答案，可能也不存在所谓的最优解，有太多的为问题与挫折需要面对，但生活总得继续，就像暴风雨后，重新扎根的种子一样，尽管满身泥泞，仍要努力生长。回头再看自己写的这一长串，总觉着功力有所减退，有些词不达意，这何尝不是一种真实的写照？生活中有太多的难题没有答案，就像大学里有太多的目标未曾实现，但正是这些不完美，才让我们不断前行。或许，成长本身就是这样一个过程：在遗憾中寻找意义，在不完美中追求进步。不必苛求每一句话都精准无误，每一次尝试都尽善尽美，重要的是，我们始终在努力，始终在书写属于自己的故事。</p>
-<p>就写到这儿吧，天亮了，该出发了。	</p>
-<p>二〇二五年七月三日与燕园</p>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        
+        data-encrypted="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"
+        data-shasum="2203880bcd2cbbf16c48f359c93e5d3c9e2202dbe626c5879924b739e8af96d6"
+            
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
@@ -218,7 +223,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2024 - 2025 My Blog
+            2024 - 2026 My Blog
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
