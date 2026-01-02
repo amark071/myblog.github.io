@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>流年碎影｜我的20241110 | My Blog</title>
+    <title>Tags: Mixed-Precision | My Blog</title>
     <meta name="author" content="Mark. Z." />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,13 +42,6 @@
 
 
 <script src="/myblog.github.io/js/lib/preview.js"></script>
-
-
-<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
-<script src="/myblog.github.io/js/lib/crypto.js"></script>
-
-
-
 
 
 
@@ -148,81 +141,165 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
-        <h1>流年碎影｜我的20241110</h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/11/10
+            <div id="archives">
+    
+    <div class="categories-tags">
+        
+        
+        
+        <span>
+            <a href="/myblog.github.io/tags/%E5%9B%9E%E5%BF%86/" style="background: #03a9f4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                回忆
+            </a>
         </span>
         
-        <span class="category">
-            <a href="/myblog.github.io/categories/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/">
+        
+        
+        <span>
+            <a href="/myblog.github.io/tags/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" style="background: #00a596">
                 <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                浮生一梦
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="background: #00bcd4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                学业生活
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="background: #03a9f4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                日志
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="background: #00a596">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
                 流年碎影
             </a>
         </span>
         
         
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ff7d73">
-                    学业生活
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00bcd4">
-                    日志
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ffa2c4">
-                    流年碎影
-                </a>
-            </span>
-            
+        
+        <span>
+            <a href="/myblog.github.io/tags/LLM/" style="background: #ff7d73">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                LLM
+            </a>
         </span>
+        
+        
+        
+        <span>
+            <a href="/myblog.github.io/tags/Transformer/" style="background: #ffa2c4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                Transformer
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/myblog.github.io/tags/Mixed-Precision/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                Mixed-Precision
+            </a>
+        </span>
+        
+        
+        
+        
+        
+        <span>
+            <a href="/myblog.github.io/tags/Flash-Attention/" style="background: #ffa2c4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                Flash Attention
+            </a>
+        </span>
+        
         
     </div>
     
-    
-    <input
-        id="crypto"
-        :class="['input', cryptoStatus]"
-        :disabled="cryptoStatus === 'success'"
-        ref="crypto"
-        placeholder="文章被加密，请输入密码"
-        
-        data-encrypted="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"
-        data-shasum="cbfb6fd482400e070a99aa89cb03a81b7458f530d58bf2c0f42b2a5b132f0292"
-            
-        v-model="crypto"
-    />
-    <transition name="fade">
-        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
-    </transition>
-    
-    
-    
-    
-    
-    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2026/1/2</div>
+            <a href="/myblog.github.io/2026/01/02/llm3/">
+                <h3>混合精度训练技术</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/myblog.github.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        大模型技术
+                    </a>
+                </span>
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </span>
+                    
+                    
+                    <span class="tag">
+                        
+                        <a href="/myblog.github.io/tags/LLM/" style="color: #ffa2c4">
+                            LLM
+                        </a>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/myblog.github.io/tags/Transformer/" style="color: #ff7d73">
+                            Transformer
+                        </a>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/myblog.github.io/tags/Mixed-Precision/" style="color: #03a9f4">
+                            Mixed-Precision
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
     
 </div>
 
@@ -254,12 +331,6 @@
         
     </div>
     <script src="/myblog.github.io/js/main.js"></script>
-    
-    
-
-
-
-
     
 </body>
 </html>
