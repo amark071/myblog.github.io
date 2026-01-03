@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Categories: 浮生一梦 | My Blog</title>
+    <title>流年碎影｜我的20260103 | My Blog</title>
     <meta name="author" content="Mark. Z." />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,6 +42,13 @@
 
 
 <script src="/myblog.github.io/js/lib/preview.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
+
+
+
 
 
 
@@ -141,155 +148,84 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="stats-container">
-        
-        
-        <div class="stats-section">
-            <h3 class="stats-title">
-                <span class="icon"><i class="fa-solid fa-chart-bar fa-fw"></i></span>
-                分类统计
-            </h3>
-            <div class="stats-grid">
-                
-                <div class="stat-item">
-                    <a href="/myblog.github.io/categories/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/" 
-                       target="_self" 
-                       rel="noopener">
-                        <span class="stat-name">浮生一梦</span>
-                        <span class="stat-count">4</span>
-                    </a>
-                </div>
-                
-                <div class="stat-item">
-                    <a href="/myblog.github.io/categories/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" 
-                       target="_self" 
-                       rel="noopener">
-                        <span class="stat-name">流年碎影</span>
-                        <span class="stat-count">10</span>
-                    </a>
-                </div>
-                
-                <div class="stat-item">
-                    <a href="/myblog.github.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF/" 
-                       target="_self" 
-                       rel="noopener">
-                        <span class="stat-name">大模型技术</span>
-                        <span class="stat-count">3</span>
-                    </a>
-                </div>
-                
-                <div class="stat-item">
-                    <a href="/myblog.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/" 
-                       target="_self" 
-                       rel="noopener">
-                        <span class="stat-name">计算机技术</span>
-                        <span class="stat-count">1</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-        
-
-        
-        
-        
-        <div class="stats-section">
-            <h3 class="stats-title">
-                <span class="icon"><i class="fa-solid fa-calendar fa-fw"></i></span>
-                年度统计
-            </h3>
-            <div class="stats-grid">
-                
-                <div class="stat-item year-stat">
-                    <span class="stat-name">2026年</span>
-                    <span class="stat-count">5</span>
-                </div>
-                
-                <div class="stat-item year-stat">
-                    <span class="stat-name">2025年</span>
-                    <span class="stat-count">7</span>
-                </div>
-                
-                <div class="stat-item year-stat">
-                    <span class="stat-name">2024年</span>
-                    <span class="stat-count">6</span>
-                </div>
-                
-            </div>
-        </div>
-        
+            <div class="article">
+    <div>
+        <h1>流年碎影｜我的20260103</h1>
     </div>
-
-    
-    <div class="categories-tags">
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/1/3
+        </span>
         
-        
-        
-        <span class="category-tag-item">
-            <!-- 明确指定跳转到分类页面 -->
-            <a href="/myblog.github.io/categories/%E6%B5%AE%E7%94%9F%E4%B8%80%E6%A2%A6/"
-               class="category-link"
-               data-category="浮生一梦"
-               title="查看 浮生一梦 分类">
+        <span class="category">
+            <a href="/myblog.github.io/categories/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                <span class="category-name">浮生一梦</span>
+                流年碎影
             </a>
         </span>
         
         
-        <span class="category-tag-item">
-            <!-- 明确指定跳转到分类页面 -->
-            <a href="/myblog.github.io/categories/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/"
-               class="category-link"
-               data-category="流年碎影"
-               title="查看 流年碎影 分类">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                <span class="category-name">流年碎影</span>
-            </a>
-        </span>
-        
-        
-        <span class="category-tag-item">
-            <!-- 明确指定跳转到分类页面 -->
-            <a href="/myblog.github.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF/"
-               class="category-link"
-               data-category="大模型技术"
-               title="查看 大模型技术 分类">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                <span class="category-name">大模型技术</span>
-            </a>
-        </span>
-        
-        
-        <span class="category-tag-item">
-            <!-- 明确指定跳转到分类页面 -->
-            <a href="/myblog.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/"
-               class="category-link"
-               data-category="计算机技术"
-               title="查看 计算机技术 分类">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                <span class="category-name">计算机技术</span>
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00a596">
+                    学业生活
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #03a9f4">
+                    日志
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00a596">
+                    流年碎影
+                </a>
+            </span>
+            
         </span>
         
     </div>
-
+    
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        
+        data-encrypted="U2FsdGVkX1/7d2Sjleg2qvaIs8QR8eh5QP7BDzHRMqxfsI4Y2udvleqGpKYj+jm5gt2spEZOBx2jZ6lM1JA0gm/lIJ6rMFkIgYb1g9qUR9+EBX3NvOKROl944xm9Th/aps2Z3vTEx0oDyk0hLZdz/DBsHy9Zy5JDedUyx84vyWUgkPuwPbrg+LVWXPX3JpSL3/JfTSGJm5/dByWvI5ufBmZ11334ZA7w4fYtwJM9g6cQdiYRhIxp/WK+o1BLBz5MVyV/3u3BrnwGbykRukceD8qAki/J54eZluWqqXWH13JAPMqPtdNNxwP9r5xrtKm/YWnl9zhufG33vTV9PjWaJeVpqfXkb0/xBPo3pQqHd1OWITmQMU4AqNN8PHc9fGaDV8ODYLyTS9tTDgdQ9BNabCOR2fDdzmPcR/fLBxbjxWTos2bFFsFyziBCtGuhB3umAacav5oA16ycDd4EeSJLcxMMR7/KuHmy+l64GYZIh67C/yOCJ3QF2MoEqA3VpLCa3HF3dlu3e8Nj/6vKoc8kMf7MEXwI0K9NlRPErbW/xziR/yDx/0Wk7sdLdY5t4qIqlhCAAN07I8lIGQCEKDm5Wig/AbEhe/DdCIRRoYTbisIntYkH1I9BQhWs+aYZycCxi/XWn9ceSTd6iU0LO1NSt5cfXfbjsxBhJKaF2/NVilSFX93aZo2Fa9kXFSlxQKzazkmmH4Ie0wMPhoBOzLV6HSzRpCneb4C3bsfiWf4Uwpv5w4HjWzCcUQrTBm0ha7QtBWGWwwIhcfL6gCsHiSxBTWAOfha6CjCSPYyaTZ/lnMv3YdLvkccw96DBQzqh0j179s4xEQF3ictSoSnIQ09u0AoGZei/tTZPxL6YmWkPZSgO5JMYL1xPaj7Ph67pKozGspe0A7jVN79eRB9xT0GEVQ8op+jc9/IeYwsM4Dmi3eWIIAM+OwSa3yPgIu22cgm1rzN1qdoB4Ol4/eQUTPEFS+hmpiHuCtylQ1Fd8XgN2VL/YYLsP0Eu6J4bmwrLYP5rx2T4u+Ha5PsOlpmGwK/0HhqS7LKa4VpYk5XNyvQzzHpVEvCN5duLOIW3d9ru27KRde+L2p9MIXZtnFfqTEMsQRUxqZm9Z/P8k18XMRQcAbveUWUD/ziB9fjJ85dMHPjniHjsSm2g+VfSPLY3eY6lQXlJ8M13RbRdXRwsru9Qk9LqHjFtIHZUowUGF4Eb6OCXPWfKHci5AXDrtb+8vuOwgvo/NX6aHkyKZoNz2IHllYtGk6TIrlkBJgA6bbbaK4F6535WRMu/yWf/E+kii1HCnqLEhErQ2UQ7kyeFHfZHY7aCwDQ48BQsUy0a8HxCawYL"
+        data-shasum="b39dc88ef3d4bd4e2802b3a81fcd0bcbd10e9cc908efcc49faa2a172bc284f8e"
+            
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
+    
+    
+    
     
     
     
     
 </div>
+
             <footer id="footer">
     <div id="footer-wrap">
         <div>
@@ -318,6 +254,12 @@
         
     </div>
     <script src="/myblog.github.io/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
