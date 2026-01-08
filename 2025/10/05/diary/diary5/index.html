@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>流年碎影｜我的20251005 | My Blog</title>
+    <meta name="author" content="Mark. Z." />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/myblog.github.io/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/myblog.github.io/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/myblog.github.io/js/lib/math.js"></script>
+
+
+<script src="/myblog.github.io/js/lib/preview.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/myblog.github.io/css/main.css" />
+
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/myblog.github.io/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/myblog.github.io/">
+            <span>MY BLOG</span>
+        </a>
+        
+        <a href="/myblog.github.io/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/myblog.github.io/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/myblog.github.io/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/myblog.github.io/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MY BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/myblog.github.io/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>流年碎影｜我的20251005</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/10/5
+        </span>
+        
+        <span class="category">
+            <a href="/myblog.github.io/categories/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                流年碎影
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ffa2c4">
+                    学业生活
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ff7d73">
+                    日志
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ffa2c4">
+                    流年碎影
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        
+        data-encrypted="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"
+        data-shasum="9b211bfbaf85493310a302073f25b5cf8d79769c46538c3f20e22aeb19543089"
+            
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2026 My Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Mark. Z.
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/myblog.github.io/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

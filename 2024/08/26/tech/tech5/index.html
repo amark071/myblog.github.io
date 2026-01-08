@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>利用pybind11封装CUDA程序为python库 | My Blog</title>
+    <meta name="author" content="Mark. Z." />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/myblog.github.io/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/myblog.github.io/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/myblog.github.io/js/lib/math.js"></script>
+
+
+<script src="/myblog.github.io/js/lib/preview.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/myblog.github.io/css/main.css" />
+
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/myblog.github.io/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/myblog.github.io/">
+            <span>MY BLOG</span>
+        </a>
+        
+        <a href="/myblog.github.io/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/myblog.github.io/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/myblog.github.io/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/myblog.github.io/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MY BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/myblog.github.io/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>利用pybind11封装CUDA程序为python库</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/8/26
+        </span>
+        
+        <span class="category">
+            <a href="/myblog.github.io/categories/CUDA%E6%8A%80%E6%9C%AF/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                CUDA技术
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/Pybind11/" style="color: #00bcd4">
+                    Pybind11
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/myblog.github.io/tags/CUDA/" style="color: #00a596">
+                    CUDA
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        
+        data-encrypted="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"
+        data-shasum="875d5053cc5c0610c6ddcdab68f4a3f73a5a4646f34929058d5c8538a0d0b30a"
+            
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2026 My Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Mark. Z.
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/myblog.github.io/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
