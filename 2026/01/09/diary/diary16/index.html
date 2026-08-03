@@ -94,6 +94,11 @@
             <span>&ensp;Tags</span>
         </a>
         
+        <a href="/myblog.github.io/lectures">
+            <i class="fa-solid fa-book-open fa-fw"></i>
+            <span>&ensp;Lectures</span>
+        </a>
+        
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -136,6 +141,15 @@
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/lectures">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-book-open fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Lectures</div>
                     </div>
                 </a>
                 
@@ -185,7 +199,7 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ff7d73">
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00bcd4">
                     日志
                 </a>
             </span>
@@ -209,7 +223,7 @@
         ref="crypto"
         placeholder="文章被加密，请输入密码"
         
-        data-encrypted="U2FsdGVkX18LukxbeySV1NEIfstVh4yxLxgYEKAdrJGUg+qkCT9hfaSLBE2pWt0XRiLajRCk4qAo3VgROipxIqRej8N0jwoNCKDapHCLJ5BDenNoOGENV2Wdq+7Rk2/wOszF3j96zFY5ugp2jWUTbPc0g9kroFCYBcgr3ojhW0jflVFBy8I5hq46S8Kqrs+1G7TH37MC7ze1yeLaKSWb8yB9ZxzeOXug8uZy2cEb8n1DV9DAJes/mLjLiRmQVBl4kRDLBB+34r0/J4ozf9RL1rZXapt4s5nIlmi08W+o+JWB9qu2yNrBaJFHDthMN0oS3+KFL6kX8fnwxGBKDO9eyQ=="
+        data-encrypted="U2FsdGVkX1/GhszXxgBQcWG3Y9lPhj5o45RhQIUfZSi5QXORqOS5OgARvQ8kMy4ySnJUo04qCjDilgKujgC+ZUbyTR+k228UPiBbYSA0Fo8al54iB/kC63uCVeaqIh9sFiy48UTswO7Ivswn7ExEeEvHuaEW45pRLzLf6VhCQfYyhQBMuVXCX7+1ElNCOSbhU7I0WKmFD9GQR+pQpFQQ7dYwY1BYB5AxvbgkjDex2S40jyvQfaA2v9Z/T50oKUMA0DVS7Y2XiybioaLP/+FWFpxXw98tKwKSVURWLu+nnxOGh9tJ7jFjEhHOwYiL7pl2XOV+gjD+Hnp1KvMiviyLTQ=="
         data-shasum="3294e8019a63237429f289c8eb343f046fbfa84b1409072ce524aa94e1ac19f4"
             
         v-model="crypto"

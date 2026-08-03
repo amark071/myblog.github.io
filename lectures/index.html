@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>流年碎影｜我的20260104 | My Blog</title>
+    <title>教案讲义 | My Blog</title>
     <meta name="author" content="Mark. Z." />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,13 +42,6 @@
 
 
 <script src="/myblog.github.io/js/lib/preview.js"></script>
-
-
-<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
-<script src="/myblog.github.io/js/lib/crypto.js"></script>
-
-
-
 
 
 
@@ -162,82 +155,24 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
-        <h1>流年碎影｜我的20260104</h1>
+            
+<div id="archives" class="lectures-page">
+    <div class="stats-container">
+        <div class="stats-section lecture-section">
+            <h1 class="stats-title">
+                <span class="icon"><i class="fa-solid fa-book-open fa-fw"></i></span>
+                教案讲义
+            </h1>
+            <p class="lecture-intro">这里收录课程教案与 PDF 讲义，点击文件即可在线阅读。</p>
+
+            
+            <div class="lecture-empty">
+                <i class="fa-regular fa-folder-open fa-fw"></i>
+                <span>讲义正在整理中，PDF 文件上传后会自动显示在这里。</span>
+            </div>
+            
+        </div>
     </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2026/1/4
-        </span>
-        
-        <span class="category">
-            <a href="/myblog.github.io/categories/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                流年碎影
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">
-                    学业生活
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ffa2c4">
-                    日志
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ff7d73">
-                    流年碎影
-                </a>
-            </span>
-            
-        </span>
-        
-    </div>
-    
-    
-    <input
-        id="crypto"
-        :class="['input', cryptoStatus]"
-        :disabled="cryptoStatus === 'success'"
-        ref="crypto"
-        placeholder="文章被加密，请输入密码"
-        
-        data-encrypted="U2FsdGVkX1+B71jiQugaBo9Tcwq91Fj4r2DF7rsEe3IhHIqMSddFNnn+uy+6Q5ZgvQI95AWlvlHoAjrKF87r1LYXoQH7Rs1dC287DYJj7crH22utr5/Kz3rUqHWWPLp1L9nJx+odq3hQ+od7K7Umjy0LGNtIWpCroB7Gm3rYd4wpz2LjhE049Mi/IVA9bIbJKjbtCJCS3EVCKeBbKU/CFiP+0+/o8dr/gWW02yaX8C1jwGeto0GLMLQdJxt7ISz5qmBpefy7d/POl6982CNnIJ6TRgmWwRPD3kZ18vwdCkN0oZFERB4gaIX5mILrZ2xYBlXwJ5uiXpOmUwEB61TXwkViod8YJm0jT3NISiBvS5p4iEDPhUHClXW//1dcdvfdditZcEbfJMafqlrhj3KVSuTP/VwNegEnTbbQlbwO2XwB/w/HVnAZD4I4Vm99DLxHV+e23x+PwBxdTrB0dUpNSB+0tajaty/n18/iTbQa70GacTkjpFq1shYyBYbz7tJCxpZcPgd5/cSOWMOIfeW93cem/GNXXMYo4dhT/PPLhyXPq33O2hww0o1Bgm1w+EzXpzRy8Gi2g4EQaB+LlDTXBVQdtjiWh72WReatVKlW1u4Lz040bKtXMDvbSAGUxDyF/GE8lIdxPi5HNKKEAoYN8ddiO0XYvo5xzzTVeDSia9ZJt04LBL721e10YK1Sx4iVyI7l+9kKvdfvSgtHy1EvGiusSn2KhrERpJ1w9Ctjqijwvm6/nTQvOrYY4l8XIP01RcxHg/7UeMJwg7EU2/k8yZ31Z7XWS5RBpZ3/MQwIGdh/NGXIS88n76KLFccTX5kfFBzKP37UHa9FHuUmCd5yqLkZ3Bf6EDnvTobox15Rg5uHyVlGjozQJ1bxsCHzxpXKwEeprSMVWTo+b5j9eE/JEOL54lIdlaqcbV0ichXJdqKleJd2fe83qgrzOvYcDKTfvojwc+REBU1yRY+t7OkeuckkZc1RowLmJYcdh1hYBvX9AqeJdH+9s1fTLV/xU2BsR0rkaqF4u0u1XbZBRpYhQK0Jy5II/6HAd5d927q/9zcrvcUTlTEAxi6rFxC8gJ4F9ROf2M4F+YHAl+4k177HEHQoHTbqCdrLlwO3BmrjykCXOuXEWTMz/AqUChxSuZ92DcdqbpZJQByIN6BMjYzdMcFiilpFk3BfNXmYkwg7Rs26EC5aI0vhE6ihDahv6hZ73GkFcDCAyqU91QgNNctCiWCumKJODz2XrnpfCX2jSX4a1tYPnTxWa9i2yJ+Pcp7DzLQ9Xmf12GPy7d/yhMUnP/gVlBNhrcG90SJMdZb7FC/c7HQYzETpym99vTS1C8/sfWPss+FVXtffmxVCSppsf9Id7NjpZqLJtkBETTbfdAkNl1lX97B9l4WLBhZBNE1MuQexDOfHQkEFkPGsMSeZE8hBVOZRitHH6F+CKaXmpbmrtOXghsizfewp5rmLLtWRaTndrNThsFnpdNStsYMwHxmg0DdTNVxk/1slqGP2Kjy5NHfKH29wZ+GiNOgdwbYhx/ZWNLtoUgy5gObU7fd0gOIylvAOYAmyqQuyCll9ia3b+ha4OoCpW/N5CGN+rHeHfUNz19KrlzKaVXC+6Jpo/cgIT171g8QZ5zxTprLO4n4Ne6RM97YBJ4Y+cjreIXAg3THMq49na8+9xnjdyIvozy6jBSZ4BP3JJrXXUaUw4s5s/hzdKrUfT70HNtpe/+KEUPqyRCFAMDA4NrTPqFBfyYl3wMqcJ6SmU2zMukwGEi1+DcoPJ51gH/ClFwIVrqc+lbZjXFjuXASCeiBruk+qJfTfr75uGoqSCYccE8jyNc4D3d0nd+K77wQhAvUag2w63FejrO5vF9Z/xfmXezZHOsVaxE7dB2Xc10oQfhFvyi6Mm2nzmC7HopStzFciYvPdNGzAQ54YpKVtAjT+qzLCUs/58SVkH/QzicR3MG8gSbMnel8JNZAuQYFBH20+Q0C2OaADwX1mquFSZC5pEcqeYn6jm1j1BCPI/d5fecKqM1oXGhV3umf6MRDAs2HCosRL"
-        data-shasum="81d59312e5d8a7368c61ed3cac3c99c7e24d77ec1161234c9b14b20cbbc795dc"
-            
-        v-model="crypto"
-    />
-    <transition name="fade">
-        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
-    </transition>
-    
-    
-    
-    
-    
-    
-    
 </div>
 
             <footer id="footer">
@@ -268,12 +203,6 @@
         
     </div>
     <script src="/myblog.github.io/js/main.js"></script>
-    
-    
-
-
-
-
     
 </body>
 </html>

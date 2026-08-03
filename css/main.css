@@ -1083,3 +1083,52 @@ ol li {
   width: 50% !important;
   height: auto !important;
 }
+
+.lecture-section {
+    margin-bottom: 0;
+}
+
+.lecture-intro {
+    color: #5c6b72;
+    margin: 0 0 24px;
+}
+
+.lecture-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.lecture-item {
+    padding: 0;
+}
+
+.lecture-item a {
+    padding: 16px;
+}
+
+.lecture-name {
+    align-items: center;
+    display: flex;
+    font-size: 1em;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.lecture-name .fa-file-pdf {
+    color: #e74c3c;
+}
+
+.lecture-meta {
+    color: #999;
+    display: block;
+    font-size: 0.82em;
+}
+
+.lecture-empty {
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    color: #999;
+    display: flex;
+    gap: 10px;
+    padding: 18px;
+}

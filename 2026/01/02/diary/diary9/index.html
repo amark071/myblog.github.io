@@ -94,6 +94,11 @@
             <span>&ensp;Tags</span>
         </a>
         
+        <a href="/myblog.github.io/lectures">
+            <i class="fa-solid fa-book-open fa-fw"></i>
+            <span>&ensp;Lectures</span>
+        </a>
+        
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -139,6 +144,15 @@
                     </div>
                 </a>
                 
+                <a href="/myblog.github.io/lectures">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-book-open fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Lectures</div>
+                    </div>
+                </a>
+                
             </div>
         </transition>
     </nav>
@@ -178,21 +192,21 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00a596">
+                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">
                     学业生活
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00bcd4">
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00a596">
                     日志
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ff7d73">
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #00bcd4">
                     流年碎影
                 </a>
             </span>
@@ -209,7 +223,7 @@
         ref="crypto"
         placeholder="文章被加密，请输入密码"
         
-        data-encrypted="U2FsdGVkX1929oihxvqIevsWh2IcsgVeZUYkHh6zJFcOD9KXVr02LW/uUUDbBeMCiZ11HvyNxUVvlVfQ/cQXXSFxmrvAup3L/5NrcKVIpn2IlCg6c4H3F5sBRr5uujigDxTu1udkMH5kLjF+96cb2CWheOvfAPTU2vIzDOJR41a58OZYFeMre97Ia1hrSh8sgQR/qpz5JR9JTvuQmXQXHCm+C/OHThidGwIHs1Balrm/s66H9znZeU+W/uLpcZP3ZCUj4rFs2V5Pk3uVPmUS42zo18NXjX9mnAZqgbg4PAgjxCVYsVVEJVLwxklI6JY1VpoVzbhNgkWlpVkCnrUannXc1ycfUEo1M5UUwOZyXD4W4KxOgdIDdLDyvuwzWTE+3yhTUhO1IzzN/yGnBpCUuN4M1Zd2VxKoMsiQjiRt4zFpns4N+yW9iWBb+L6HkctRfioGnpf2bV9DxrT/OSjpMx9E9RIt4+4eWsU5japGIzaLHooPK0p8N+ZSMSbj+FmJyEh94WTcC1arCbYvOa46QOo6xy3n4jxn7tAbf5c3e1S61VD6/IUJFZhuOQ8+ofPo4ln87eZa8oXCmoHdX1rolFik73MuaLxxpCkFepvMiVS6/PEn7sb/h2D5nm9ZzwOPir7uGA1iddu9eYlTaOyprYGDf2SSCoPF3UNtfSDtBDnZjgeWWk9EiCcxoYRJC2uPdQLHHz5tvg9k2qeI/6ROoN6/7Hf3JctkUkH1OGTNa7KNnD55C9DUtnxpAChY/KgvBw+2T5mrQxt22mn+u67QDT6TcQTvxrqwsxXMB1vGxScPdjnTqdcL/s1t4A7KzkGiTcdz3Ugqie9D7TjTZNFoHkEaOd0VnhIvSj//7Th8eT+paxkpDgd/UKWsuQOYkTF9bTdSqiCLi0e2NjF6eWjqbv7UaCaIU697pjr+16KHKn73E43q02hQas6ubWL4RmgXiDi80Mw+FMRrTdqglxrzKWVFfPcntglRxLEzUE3E7b9tDWctuNp4EhHx3KW+EEA8xee5Sx5O+KHQqZb0ybsxCWdvh45lPdcK48rQ7AouonB8cXY1cpoezF24fc8IU1+TNIsyo5jOiSlrW0DHMh2IzhJgBN5OFvcSTI/TslO/k+E9C11kXtLUS4Kxtm915iqSwdtUw4Ow8IXKDAxe4ThMxNpYdGL41UYAtS9Woar1otpGaBMInFFaSOd+n/ugqOiKH/WbqxoBjCsJ1L0urDrHNE0rXsb/Hz3eBodW3wKoTdNImX58UJNopt1bQlNq2sUCdAM1/3erZFXbaTkPTxmEB6x/AE+kM4HPs3KxLbPfqKvIs6v51IxHEgUyV3jTIXMzQrnp10tn3pMOVo09FhyQ20XgNJZXbeAw5MjOi4eXiBOSzfo8fPgwsc9CAAqDw5W7MlPSpRWMAaP3sslSRgXV8vwAp53ZOdFfbZokD20wOmlhQV/7gRla1+v/hN6ZzsHUGLN1J7SM++dd4RhC2C96CiZ6WLPXwQZMDwgZZujeP+z27HYZFKQyVRH8ILqQP6aF"
+        data-encrypted="U2FsdGVkX1/4WJGCRM/t1RLOiDRTV8Dv7zZ+SE6NIgzuvd7eDMSealcFmD1QvOX2tXSDCNthmjMxrIJqiILLLi1dqCk1erN1MBfIGhmce06YEfe78NWNxGzMwDz7g1Hf515Ie+mUTQDoZB0Kw+DAUAYvk961SPxEDOFvIemNh3IY1XCKtU0g9Uw89ZV3xSYwGEzLc/LP5cRc4qQQkW8B3uI+qCZavID9Px5bFLgPULjqOvjnPKPLoE82wKGpE52NDj26ZAKHxP/YMOftSS4cm9eDRXiC2LMZ5Bm1ZkK08cmATDDuOTBS6AXUwjBXFqUrrTOOMycq4LWq20eXOemN610TbBbSLHdG4C/4fta8iLcuccK3hzxfTXSZQPAu1tlrnbB1R0RknHBFBD2e/oumQpGEc03ruhi4t0NSE/+PSfav5yLVXakzRisj9UrzP4/3b5eZN3IioiGftmvAsKL7r6TyORNYNL/FCZ+Yqs+Euk15QJBxpzikAXK1fwOFjdpdbUAkpNQAK1qzJB27nNUGs59M6b1GeArIat2S6pCqvhjKV5CWhlZKXY4HbutgsgjgIK66i3isASKnpwnwrepZpVBzv8yUsrlbd4XU/WYr44hTq1wiOIv43uJbxR+6BuZRD3De+yUEN4caRCyZeEVKa+4wT0y+W28J2gj8f1CY3kDZlN5xnmWLYAKyaI04VWK/Vq5bYqJFeNNp2C8dU1gDhkADsjDXov6CcItZcFwdUjh/ranXaratW94jMsy9ex5S2EHdSdMcmwkMWsDaUkrFO4C7DYfOVBVkL6Lkgm13omZN9gWj/Xy3UfMDCSnhX+Pv/bg5M5QO901KA6grYwIPqp1Hr3NxfkeeJmd5pQjxVhWMrlNac6IP5ZorR3QEJkX4VfM9LkMESD9hZaF0/CR0nYsPPFVm80yzQ+FmmyFi0H4Q7fBtvLqWJCHaieap9jzNELMswcE/dP+BXtfiOjxZdyy/uKwCjT1EycqjbtqLehTOPk2tkDMhwBUTc5BXPwReDl+acNRJPTNHx8mIJF3L9YhRtVB7lyvmllZVw8guWKOnLnjULdUZ02IGcfqbreslqmCnW5VHtjhyCWNWkNr4WdPTX+lYKZaQ+XSD1f19HXKO4y6MQcxKLapjKrI1JaY9af0/MCvsgcXo7ZfgxbbaL01E+I7X+DHS2bL3svvI935ci6vv/dvWswVZSS6NdnWsSLMLcIGfrKh2kmx4GWBqIpBeotFkHn/u1o5Iah/UZ+URk4/g7KsyOe2YnuXbvAe7h2ouOTvIPvw6OM8lOG7x3b/qMLcJlbLbUTOQKGz63Zve2j4xr5YCK8PkQO/K+gR7BamLTm23LcN7SRAf5H2pMoCIOBkqf6EoveclFIs6Nts6Ty7UeMkSjLZj6cjCnP9QF2aI0wwc3eaQR449/gcIPMaCVWAU4Wfoy79D/4I1RGN9M9YLLytXBJMS/D29xdPNkeRh/fPJx3oPX3nntMH2iT+381L2kCPjQN2XWO2q+nZjh0YoAx5RSJKi8lr6/9aU"
         data-shasum="876af8fbc926a0665d1cd459012d14a5d11122159424be866df54bb222be58c4"
             
         v-model="crypto"
