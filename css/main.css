@@ -1097,6 +1097,30 @@ ol li {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
+.lecture-group {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(52, 152, 219, 0.22);
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.lecture-group + .lecture-group {
+    margin-top: 20px;
+}
+
+.lecture-group-title {
+    align-items: center;
+    color: #555;
+    display: flex;
+    font-size: 1.08em;
+    gap: 8px;
+    margin: 0 0 14px;
+}
+
+.lecture-group-title .fa-folder {
+    color: #3498db;
+}
+
 .lecture-item {
     padding: 0;
 }
