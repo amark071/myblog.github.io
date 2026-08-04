@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>教案讲义 | My Blog</title>
+    <title>Materials | My Blog</title>
     <meta name="author" content="Mark. Z." />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -43,6 +43,9 @@
 
 <script src="/myblog.github.io/js/lib/preview.js"></script>
 
+
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/myblog.github.io/js/lib/crypto.js"></script>
 
 
 
@@ -128,70 +131,28 @@
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             
-<div id="archives" class="lectures-page">
+<div id="archives" class="materials-page">
     <div class="stats-container">
         <div class="stats-section lecture-section">
             <h1 class="stats-title">
-                <span class="icon"><i class="fa-solid fa-book-open fa-fw"></i></span>
-                教案讲义
+                <span class="icon"><i class="fa-solid fa-folder-open fa-fw"></i></span>
+                资料
             </h1>
-            <p class="lecture-intro">这里收录课程教案与 PDF 讲义，点击文件即可在线阅读。</p>
+            <p class="lecture-intro">该页面已加密，请输入密码后查看资料。</p>
 
-            
-            <div class="lecture-sections">
-                
-                <section class="lecture-group">
-                    <h2 class="lecture-group-title">
-                        解析几何
-                    </h2>
-                    <div class="stats-grid lecture-grid">
-                        
-                        <div class="stat-item lecture-item">
-                            <a
-                                href="/myblog.github.io/lectures/pdfs/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95.pdf"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                <span class="stat-name lecture-name">
-                                    <i class="fa-solid fa-file-pdf fa-fw"></i>
-                                    解析几何
-                                </span>
-                                <span class="lecture-meta">
-                                    PDF · 367.4 KB · 更新于 2026/7/31
-                                </span>
-                            </a>
-                        </div>
-                        
-                    </div>
-                </section>
-                
-                <section class="lecture-group">
-                    <h2 class="lecture-group-title">
-                        数列极限
-                    </h2>
-                    <div class="stats-grid lecture-grid">
-                        
-                        <div class="stat-item lecture-item">
-                            <a
-                                href="/myblog.github.io/lectures/pdfs/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90.pdf"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                <span class="stat-name lecture-name">
-                                    <i class="fa-solid fa-file-pdf fa-fw"></i>
-                                    数列极限
-                                </span>
-                                <span class="lecture-meta">
-                                    PDF · 244.2 KB · 更新于 2026/7/28
-                                </span>
-                            </a>
-                        </div>
-                        
-                    </div>
-                </section>
-                
-            </div>
-            
+            <input
+                id="crypto"
+                :class="['input', cryptoStatus]"
+                :disabled="cryptoStatus === 'success'"
+                ref="crypto"
+                placeholder="页面已加密，请输入密码"
+                data-encrypted="U2FsdGVkX183aYWUMniBfl8d1UAqEc+vpnWAhn/Jijs6o44zEfTigTNyrM7spt2kfh6jR+EPQXeitN4SrZh2bGthdDswMxpvl+9RrfdmWurzSbv68lqCn7MvQHwqnDl9ppHxG2N+DGjCoKcRqaEwM4Nf5smNS00LPUoBjEpVHBKSb83gtfXYWYaU/WsYmErSValj4QkCPjf7g2dwODysBuu69xk8duHM43QKaEX1ygFxqfdUvezB2V+8Kg9b4tln"
+                data-shasum="d0c0d2e66585258ca447e7e283bbe9dc195112f8244515a6f81279a0f2051bc6"
+                v-model="crypto"
+            />
+            <transition name="fade">
+                <div class="materials-content" ref="content" v-show="cryptoStatus === 'success'"></div>
+            </transition>
         </div>
     </div>
 </div>

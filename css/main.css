@@ -1153,6 +1153,18 @@ ol li {
     padding: 18px;
 }
 
+.materials-page #crypto {
+    margin: 8px 0 22px;
+}
+
+.materials-content {
+    margin-top: 4px;
+}
+
+.material-name i {
+    color: #3498db;
+}
+
 #profile-page {
     box-sizing: border-box;
     margin: 100px auto 0;
