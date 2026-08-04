@@ -1164,6 +1164,7 @@ ol li {
 .profile-section,
 .profile-actions {
     background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(52, 152, 219, 0.14);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     padding: 28px;
@@ -1292,6 +1293,13 @@ ol li {
     line-height: 1.75;
 }
 
+.profile-summary {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid #e8eef3;
+    border-radius: 9px;
+    padding: 4px 18px;
+}
+
 .profile-section > p:last-child,
 .profile-record > p:last-child,
 .profile-record > ul:last-child {
@@ -1305,6 +1313,25 @@ ol li {
     padding-left: 24px;
 }
 
+.profile-box-list {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.profile-box-list li {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #e8eef3;
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+
+.profile-interest-list,
+.profile-honor-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .profile-detail-list li + li,
 .profile-record li + li {
     margin-top: 7px;
@@ -1312,8 +1339,10 @@ ol li {
 
 .profile-record {
     background: rgba(255, 255, 255, 0.7);
-    border-left: 3px solid #9abbf7;
-    border-radius: 0 8px 8px 0;
+    border: 1px solid #e4ebf0;
+    border-left: 4px solid #9abbf7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.035);
     padding: 16px 18px;
 }
 
@@ -1348,6 +1377,18 @@ ol li {
 .profile-publications li::marker {
     color: #3498db;
     font-weight: bold;
+}
+
+.profile-publications {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.profile-publications li {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #e4ebf0;
+    border-radius: 8px;
+    padding: 14px 16px;
 }
 
 .profile-publications span {
@@ -1421,5 +1462,10 @@ ol li {
 
     .profile-record-heading span {
         margin-bottom: 10px;
+    }
+
+    .profile-interest-list,
+    .profile-honor-list {
+        grid-template-columns: 1fr;
     }
 }
