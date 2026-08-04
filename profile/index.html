@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>个人主页 | My Blog</title>
+    <title>Yizhuo Zheng (郑怡卓) | My Blog</title>
     <meta name="author" content="Mark. Z." />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -64,7 +64,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/myblog.github.io/profile">
-            <span>MARK. Z.</span>
+            <span>YIZHUO ZHENG</span>
         </a>
         
         <a href="/myblog.github.io/profile">
@@ -81,7 +81,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;MARK. Z.</span>
+            <span>&emsp;YIZHUO ZHENG</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -113,49 +113,288 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="profile-page">
-    <section class="profile-card">
+            
+<div id="profile-page">
+    <section class="profile-hero">
         <div class="profile-avatar">
-            <img src="/myblog.github.io/images/avatar.jpg" alt="Mark. Z." />
+            <img src="/myblog.github.io/images/avatar.jpg" alt="Yizhuo Zheng" />
         </div>
-        <h1>Mark. Z.</h1>
-        <div class="profile-description">
-            <p>For the Best Memory &amp; love</p>
+        <div class="profile-hero-content">
+            <h1>Yizhuo Zheng <span>郑怡卓</span></h1>
+            <p class="profile-headline"><strong>Master&#39;s Student in Big Data</strong></p>
+            <p>School of Mathematical Sciences, Peking University</p>
+            <p>Beijing, China</p>
 
+            <div class="profile-contact-grid">
+                <a href="tel:+8618382330763">
+                    <i class="fa-solid fa-phone fa-fw"></i>
+                    (+86) 18382330763
+                </a>
+                <a href="mailto:2501210113@stu.pku.edu.cn">
+                    <i class="fa-solid fa-envelope fa-fw"></i>
+                    2501210113@stu.pku.edu.cn
+                </a>
+                <span>
+                    <i class="fa-brands fa-weixin fa-fw"></i>
+                    abc1832330763
+                </span>
+            </div>
+
+            <div class="profile-link-row">
+                
+                <a href="https://github.com/amark071" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github fa-fw"></i>
+                    GitHub
+                </a>
+                
+                <a href="https://blog.csdn.net/hhhjjjjio?type=blog" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-code fa-fw"></i>
+                    CSDN
+                </a>
+                
+                <a href="https://openreview.net/profile?id=~Yizhuo_Zheng1" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-file-lines fa-fw"></i>
+                    OpenReview
+                </a>
+                
+                <a href="https://orcid.org/0009-0005-5750-8803" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-orcid fa-fw"></i>
+                    ORCID
+                </a>
+                
+            </div>
         </div>
+    </section>
 
+    <section class="profile-section">
+        <h2>Profile</h2>
         
-        <div class="profile-social-links">
-            
-            <a target="_blank" rel="noopener" href="https://github.com/amark071" aria-label="github">
-                <i class="fa-brands fa-github fa-fw"></i>
-            </a>
-            
-            <a target="_blank" rel="noopener" href="https://qm.qq.com/q/kjufFJaKu6" aria-label="qq">
-                <i class="fa-brands fa-qq fa-fw"></i>
-            </a>
-            
-            <a href="/myblog.github.io/images/wechat.png" aria-label="weixin">
-                <i class="fa-brands fa-weixin fa-fw"></i>
-            </a>
-            
-        </div>
+        <p>I am a master&#39;s student in Big Data at the School of Mathematical Sciences, Peking University. I received my B.S. in Information and Computational Science, with a focus on Computational Mathematics, from Peking University in 2025.</p>
+        
+        <p>My work sits at the intersection of numerical linear algebra, high-performance computing, and AI systems. I have research and engineering experience in streaming algorithms, sparse matrix solvers, large language model inference optimization, mixed-precision deep learning, and parallel programming.</p>
         
     </section>
 
-    <section class="profile-content">
-        <h2>内容导航</h2>
-        <a class="profile-entry" href="/myblog.github.io/lectures">
-            <span class="profile-entry-icon">
-                <i class="fa-solid fa-book-open fa-fw"></i>
-            </span>
-            <span>
-                <strong>教案讲义</strong>
-                <small>课程教案与 PDF 讲义</small>
-            </span>
-            <i class="fa-solid fa-angle-right fa-fw"></i>
+    <section class="profile-section">
+        <h2>Technical Skills</h2>
+        <ul class="profile-detail-list">
+            
+            <li><strong>Programming languages:</strong> C++, MATLAB, Python.</li>
+            
+            <li><strong>Tools and frameworks:</strong> MPI, OpenMP, CUDA, Triton, LaTeX, CMake, TensorFlow, PyTorch.</li>
+            
+            <li><strong>Mathematics coursework:</strong> Mathematical Analysis, Advanced Algebra, Differential Equations, Probability Theory, Numerical Algebra, Numerical Analysis, and Optimization Methods.</li>
+            
+            <li><strong>Computer science coursework:</strong> Data Structures and Algorithms, Parallel and Distributed Computing, Machine Learning, Programming in Artificial Intelligence, and Optimization Methods in Deep Learning.</li>
+            
+            <li><strong>Languages and teaching:</strong> CET-6 English, Mandarin Level 2-A, and certified Senior High School Mathematics Teacher.</li>
+            
+        </ul>
+    </section>
+
+    <section class="profile-section">
+        <h2>Research</h2>
+        <h3>Research Interests</h3>
+        <ul class="profile-detail-list">
+            
+            <li>Artificial intelligence and large language model systems</li>
+            
+            <li>Numerical linear algebra, sparse matrix computation, and scientific computing</li>
+            
+            <li>Streaming algorithms, sketching, and quantile estimation</li>
+            
+            <li>Parallel computing and performance optimization</li>
+            
+        </ul>
+
+        <h3>Research Experience</h3>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>Research Intern, supervised by Associate Professor Tong Yang, School of Information Science and Technology, Peking University</h4>
+                <span>02.2024-09.2024</span>
+            </div>
+            <ul>
+                
+                <li>Improved the classic KLL algorithm with Elastic Sketch to achieve more accurate in-stream quantile estimation, leading to one research paper.</li>
+                
+                <li>Analyzed the asymptotic error behavior and temporal stability of Stair Sketch with DA Sketch as its atomic component.</li>
+                
+            </ul>
+        </article>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>Research Intern, supervised by Associate Professor Jinbiao Wu, School of Mathematical Sciences, Peking University</h4>
+                <span>11.2024-07.2025</span>
+            </div>
+            <ul>
+                
+                <li>Improved the Uzawa method with an augmented Lagrangian approach to accelerate large-scale sparse saddle point problem solving.</li>
+                
+                <li>Refactored the CHOLMOD library in SuiteSparse-7.8.2 to support direct-method solving functionality.</li>
+                
+            </ul>
+        </article>
+        
+
+        <h3>Recent Publications</h3>
+        <ol class="profile-publications">
+            
+            <li>
+                <strong>Cooled-KLL: Enhancing Quantile Estimation by Filtering Hot Item</strong>.
+                31st SIGKDD Conference on Knowledge Discovery and Data Mining, Research Track, 2025.
+                <span>CCF-A conference, co-first author.</span>
+            </li>
+            
+        </ol>
+    </section>
+
+    <section class="profile-section">
+        <h2>Education</h2>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>
+                    <a href="https://www.math.pku.edu.cn/" target="_blank" rel="noopener">School of Mathematical Sciences</a>,
+                    <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener">Peking University</a>
+                </h4>
+                <span>09.2025-07.2027</span>
+            </div>
+            <p>M.S. in Big Data</p>
+        </article>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>
+                    <a href="https://www.math.pku.edu.cn/" target="_blank" rel="noopener">School of Mathematical Sciences</a>,
+                    <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener">Peking University</a>
+                </h4>
+                <span>09.2021-07.2025</span>
+            </div>
+            <p>B.S. in Information and Computational Science, Computational Mathematics track</p>
+        </article>
+        
+    </section>
+
+    <section class="profile-section">
+        <h2>Selected Course Projects</h2>
+        
+        <article class="profile-record">
+            <h4>Optimization Methods in Deep Learning</h4>
+            <ul>
+                
+                <li>Used TensorFlow to conduct mixed-precision training for CNN and ResNet-50 models with FP32/FP16 and FP32/BFP16 settings.</li>
+                
+                <li>Used PyTorch to study how LossScaling settings affect mixed-precision training outcomes.</li>
+                
+            </ul>
+        </article>
+        
+        <article class="profile-record">
+            <h4>Programming in Artificial Intelligence</h4>
+            <ul>
+                
+                <li>Implemented CUDA kernels for CNN layers and used the framework to complete image classification on the MNIST dataset.</li>
+                
+            </ul>
+        </article>
+        
+    </section>
+
+    <section class="profile-section">
+        <h2>Internship Experience</h2>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>Finite Element Industrial Software and Numerical Analysis Laboratory, Chongqing Institute of Big Data, Peking University</h4>
+                <span>05.2023-05.2024</span>
+            </div>
+            <ul>
+                
+                <li>Researched recommendation systems based on users&#39; formula-selection preferences and problem-solving patterns.</li>
+                
+                <li>Tested a numerical integration function library and fixed numerical and implementation errors.</li>
+                
+                <li>Studied Trilinos and reproduced selected numerical methods used in the library.</li>
+                
+            </ul>
+        </article>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>Large Language Model Inference Optimization Group, Baichuan AI</h4>
+                <span>06.2024-10.2024</span>
+            </div>
+            <ul>
+                
+                <li>Used Triton to design hardware-aware block schemes for large model inference and parallel optimization.</li>
+                
+                <li>Integrated Triton-generated assembly source files through C++ to complete code merging.</li>
+                
+                <li>Explored W4A8 quantization tools and combined W4A8 with W8A8 to optimize matrices of different sizes.</li>
+                
+            </ul>
+        </article>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>Mechanical Transmission Simulation Laboratory, Chongqing Institute of Big Data, Peking University</h4>
+                <span>10.2024-present</span>
+            </div>
+            <ul>
+                
+                <li>Benchmarked large-scale sparse matrix solvers in Baltamatica and MATLAB for both saddle point and non-saddle point problems.</li>
+                
+                <li>Proposed increasing penalty factors and combining iterative methods to accelerate direct-method solving, achieving faster results than MATLAB backslash on extremely large matrices.</li>
+                
+                <li>Studied the internals of MUMPS-5.6.2.2, wrote a user guide, annotated function-call relationships, and explored reconstructing a MUMPS-based multifrontal direct solver with a focus on delayed pivoting for supernodal computations.</li>
+                
+            </ul>
+        </article>
+        
+    </section>
+
+    <section class="profile-section">
+        <h2>Leadership and Service</h2>
+        <ul class="profile-detail-list">
+            
+            <li>Class monitor of Undergraduate Class 5, 2021 cohort, School of Mathematical Sciences, Peking University. The class received honors including Outstanding Youth League Branch, Advanced Class Collective, and Model Class Collective.</li>
+            
+            <li>Student assistant at the Student Affairs Office, School of Mathematical Sciences, Peking University, 09.2023-01.2024.</li>
+            
+            <li>Counselor for Undergraduate Class 3, 2023 cohort, School of Mathematical Sciences, Peking University, 09.2025-01.2026.</li>
+            
+            <li>Organization Committee Member of the Big Data Master&#39;s Party Branch, School of Mathematical Sciences, Peking University, 09.2025-present.</li>
+            
+            <li>Volunteer for Peking University&#39;s 2022 Sichuan admissions group, 2022 freshman orientation, 2023 opening ceremony, and 2023-2024 campus open day admissions consultation for the School of Mathematical Sciences.</li>
+            
+            <li>Speaker at the 2025 May Fourth Youth Talk event of the School of Mathematical Sciences and participant in Peking University&#39;s 2025 &#34;1000+&#34; leadership program for new graduate student leaders.</li>
+            
+        </ul>
+    </section>
+
+    <section class="profile-section">
+        <h2>Honors</h2>
+        <ul class="profile-detail-list">
+            
+            <li>Peking University Social Work Award, 2022, 2023, and 2024.</li>
+            
+            <li>Peking University Outstanding Graduate, 2025.</li>
+            
+        </ul>
+    </section>
+
+    <div class="profile-actions">
+        <a class="profile-button profile-button-primary" href="/myblog.github.io/profile/cv/cv.pdf" target="_blank" rel="noopener">
+            <i class="fa-solid fa-file-pdf fa-fw"></i>
+            Brief CV
         </a>
-    </section>
+        <a class="profile-button" href="/myblog.github.io/lectures">
+            <i class="fa-solid fa-book-open fa-fw"></i>
+            Lecture Materials
+        </a>
+    </div>
 </div>
 
             <footer id="footer">
