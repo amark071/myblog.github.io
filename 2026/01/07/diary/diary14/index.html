@@ -76,7 +76,7 @@
         
         <a href="/myblog.github.io/">
             <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
+            <span>&ensp;Blog</span>
         </a>
         
         <a href="/myblog.github.io/archives">
@@ -99,6 +99,11 @@
             <span>&ensp;Lectures</span>
         </a>
         
+        <a href="/myblog.github.io/profile">
+            <i class="fa-solid fa-user fa-fw"></i>
+            <span>&ensp;Profile</span>
+        </a>
+        
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -113,7 +118,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Blog</div>
                     </div>
                 </a>
                 
@@ -150,6 +155,15 @@
                             <i class="fa-solid fa-book-open fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">Lectures</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/profile">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-user fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Profile</div>
                     </div>
                 </a>
                 
@@ -192,7 +206,7 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">
+                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #ffa2c4">
                     学业生活
                 </a>
             </span>
@@ -223,7 +237,7 @@
         ref="crypto"
         placeholder="文章被加密，请输入密码"
         
-        data-encrypted="U2FsdGVkX18ranSTXs2UiDFvubio1b8L/b45KMtMg+LmhktU6KwwJ2986soROBE4AXOVW0Ly7cqGfIC1LI3MEiDXZghqfy5nL8ccWuj0cyCzyzHbq1hWL2ak8gOi8InwBpsA67WJHREIrK+Q5iuIJp4nYKqCTtLYMfOqVUbO5iVP9EpCPuqvhwfvtQOBdqLGO1aWmr5NMNBJbLyXkaPxCMYee7g+S2Op58ZYQRFngkmOfO/nfCLWnh23g+9VXk5LL81PQ/b4THqfqrEYpRPTmC86nQwgjGI3lzqoeEUIcx7ALW8uXxSayPEV3tnGRs9FBs4rLNwjFaN470gIDM36b2XP+sUYj9Tf10+NOzgxFzSZuIqQxm/6Ap23x/+s52YruhlUGsMeKN64Tb661yohNe6tCUAIOP1X4G6Q87eUzjiZtzKxMR3xKvTtUGqwscQcEpWmepIEf9u0IgLooMdUK4xYIycyRUgMlqpLaiU/PhAH5gA/rjVRiFrhogaae1hxkixHP0vVhdC/CImjdZq2FdYPVrseYb2PbZ+120Wf2uiMbn4fJxip21rqxxwWFMnK4z/xICbnnyU5XGcfuz/5eZrgd5pTehhi7RiVg7TvGgKlrBXMpwVdHdTO2W7sKUV5RDGA52jZmsaUGvK7IVOr5iuuDOURqhh6oPh4ykwaRyRUaJmFFBdyZhNPYQXAqcM04VikPwED6pmOz+kvztYVNX55aMFK4KxobPGDKyKOWCXIbQzUBQYnBPg5voSvJA7eUUYd7GyEGWITPoo4iLkt/ryaIe0p1445tnYuoL/SWopq3uvUdgxa5gdV2+OOzJkktLq/mNSpIr7IiTjjLiHdPIz7Oo/zalZNHXH77WyXLIwyIcok+O1M1HrJMqzaQ1FzxITKhMqYC9peL1ets5pejLafC3eFMSIC0T/4J0RHnZOFZ7GxyYl6Pn22OWsoeS/DE9ugtzbR2Gcf4DGbzqjZDR3hKddJSQ0+fs8RipDltJE9xTm828iC9njTUc676/djjOfu8lcTXgCdFLx/LNstZRB4dvSe5vICk2IPCr2eJaRAjMo9VxmaWyLltSed13SycISztAKPiy/ts9OgNzEux3/XkdwzCIea3UlBVxBjFaYTfwX4mzjG/JTXFMGjYKyZGLz/ycmHSr7uqAEt2I/tI0bVr3ZkRMy8xtevQE3NTVQ+HBxFPUpbPzgBAhHzb2sIK4myXnP26Cu0/9rCTaCxvZ+l4VX717uAlV1YKdG2i932HKbjmjdJgAAXK4uI1cGBQIRsKQMGDzQFGt9spNBsM7UMXF8VP1p9Y0z1mHml0hHLQ7lEkpn2M4jwAhbXly3Dt3OkjwZw4Mj7K28mLadneURCbNTSTd56J2QwGWc5uaJ7Bl2ajarFsfVysjccBufhA2Q0GZfV8uGYWCqvW+v3nXjNbvbc1jnMnCso78DPQmMVeEhBTEitPwYuNkJf1tK362Ub3sjwpBPeTPr8AOF4AoM+aQ4utkBNcVjKEMtcPX0EgdzKoxTbq8GPI+B2cD1cRLuWZCKimiGkX8OFllidwG1U9vElXR1b0ajT3oxhzV89upGyv96FZvsKIeqo4M0B/rxEZhX+zdhMR6xWC/CFms8++6yJpo8ifbUG0DtQKFE="
+        data-encrypted="U2FsdGVkX18txbK0HCTvCNP9wRs7Cn2pTDa2xdTyVGEX6DD2PLpOMFPhYV/zWHKCOq4uBf7t/nr1B+xktqAJ/iKUH3cVfRIfnKUqAdXR5C6v4yZlmHXd7+czYdl3KFZBseTnDQGdOVJvFTyh/ujk4dJ0cR1bfBBVgLeVm7Z+TRbFHlbhNp7Un6yA582aCO3nO9jodfdVmQULsvH1bdt279glc60AP/FX0tBS6fI8OhwurxjNAe0O7wrjL5HPeXhalgCpvpCToX+Rxb9fQ4WMSXzKPxTv3hIbaKHauZA42u/F0hlUCAXHWLQ7w4iC4uxPUnSZ2WCwYPECmSHhYLLJ1uYGngndzTCiVkh1HcfLzsKSI4sg90oVVnQPvT9aQsqni9KpD3K/hcVb4gbKLmRg6bsagVilJtAkWFMP/Qsqhl5hY09GM2g8q9s7YRdOLt4Yj/9YRa/eP0c9lVLMhS03Kbwjy/wHiTrwFEE2mZPF/ea9Zl9YunYu/sz5mEvExWSrO2WaZZPS880iqHF+9V178EDEkkKUwIwHpvydRjfVjpI6kqiVEofHXlQswAnxJ+6AkzGZsIsWYYMlUrhIhcj1XkFDWIF1QlhWgsvXUjudJdfx4xN5awQ80+WUTSdunZpafuIcbRIwS0Icsqy8WT3OjSef2q97JiGoIuB5Th7BECzjJ8vawr0DUeQ14DbJThJkv2pqZxdFFoXW585Bn+Sccybw1DeH482cGJkaGlqlW6DDriUbxeDq3YKmD/v+0ajZi1Vc7IaKdW9WnT8bIcDhrQ0DUwL6y6kSrb1tRatJHnCLgk1/QJCJciNZ/7clfLivX3j4Hp8R6iTbk4qr0rS6trmLEMKHRFqmqUNqIqIGngRNmVz5/yClhwI63YFhmHE8YwVcg7u9GhwGLYYdEVHJamEtrMfYSX93DUoc0ohCQ5ZesAjQtzpAgBi5lBkRSbdn+SlduJiCbDEqrjUgN8VF/Galw9JXtGQjcDw9Re/QQAlmUww1kk0QyZjSVclmflG73lDdTzos3kogXUEZpC8olAmYEAXCunOanQcQcMncAzsydfUFAS93ZoSR/RLGTdG+esHad3zYaZaCEhvDOQGiMcxYnlkPCabLrZrJSt1z9WvNNVnWmA7iSVs5TSl2T504JqC2i9iFCtTSy3ytFAmnkvpbGzd8qW7x5I4elCY2v5FEebBCjlHPHVwMDgfdrPtRbwaGNUbAHkT0x1QBjfObna3z0v/1fOHTnq6ikUY6XTugrtZIHZQK1BHOXNyfoVQIP5n6e1dLhI6/T4Sea6ZWJRXMQqlvL7CShMlwtkwxBJqVeWjplJ/G1bGLFG+Z8iJkfWScLG7ba6fc209balnF54AhywFsE2+EJ1cNxNahdJzOhZm4gMjrmnj914XlwhR1V5SD2cJL6crW7FmnaMAquOxtlYKFujVwMzPllBiQzsB/GPWITglIkWglZYCYVbNyRCHrf6T+5TEZ1bR61w6XNxkBYig2yp827gIEGJfBkrHyluCKO8XL/1HI6qYntf9HN0C6mOGzz9Z4PKfUEe1vMNHJq8oAZiONl9oOPsztdnWr/9Zii5sWmywfWuZNVRF+UVvKzAA4ewBU8upELgp84w4MHvvvVwI3Endy0Dk1Ajk="
         data-shasum="183bb79d569a344b6b687ab0ff388d73cb1e9946cc7afd18353e6c8456d7c72a"
             
         v-model="crypto"

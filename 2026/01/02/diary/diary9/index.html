@@ -76,7 +76,7 @@
         
         <a href="/myblog.github.io/">
             <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
+            <span>&ensp;Blog</span>
         </a>
         
         <a href="/myblog.github.io/archives">
@@ -99,6 +99,11 @@
             <span>&ensp;Lectures</span>
         </a>
         
+        <a href="/myblog.github.io/profile">
+            <i class="fa-solid fa-user fa-fw"></i>
+            <span>&ensp;Profile</span>
+        </a>
+        
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -113,7 +118,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Blog</div>
                     </div>
                 </a>
                 
@@ -150,6 +155,15 @@
                             <i class="fa-solid fa-book-open fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">Lectures</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/profile">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-user fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Profile</div>
                     </div>
                 </a>
                 
@@ -192,21 +206,21 @@
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">
+                <a href="/myblog.github.io/tags/%E5%AD%A6%E4%B8%9A%E7%94%9F%E6%B4%BB/" style="color: #03a9f4">
                     学业生活
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #ff7d73">
+                <a href="/myblog.github.io/tags/%E6%97%A5%E5%BF%97/" style="color: #00a596">
                     日志
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #03a9f4">
+                <a href="/myblog.github.io/tags/%E6%B5%81%E5%B9%B4%E7%A2%8E%E5%BD%B1/" style="color: #ff7d73">
                     流年碎影
                 </a>
             </span>
@@ -223,7 +237,7 @@
         ref="crypto"
         placeholder="文章被加密，请输入密码"
         
-        data-encrypted="U2FsdGVkX18UK8knLo2F8hl4Nanefm6ZvMQStP6JkHRk8LAdn9shZOwjHMJx+PQybWo7G8K3WhhriBfsYUyX0wR/blzqXP1AKlaxKoZ9y6HPqOBll8fgUg+YQfYOjL4IABORc8oop3t73MGM66tAfA2IDaE7kfvgKV2kOtc8bJzodofljRMg8m+sSDUZGWvHZaGaRaKUoHYbKR3Qk8oiWGh9m49bmG5rJ5/LOSRvdVzTpMxjisErzxvATdCpe+wFG/otb1+6n9ByS8EB4z6ElF/fSrZKbq4FHc7EKHv9t/2qg4aQ+C2MlwKJblls57kxixCTv0pTQbJr0zbgsNekP3VtSPZRUSf9Tons4CjwRsTWwfWiuVHRG2crQhc2rCa9bVHK5BejbttFLwSCksw2QIhbUWYNvGrkgMHYD/OGdEw2kgBxfBMSXH0byl55+yoclRHZSb4SJlr0+idznwBPFteyBJ8vUvFso236GW5wyl459FYHyb75hBhpZh2j87RjW5vGl3Zwa5yXtZ7OQWvCFeHKRQHD9X/DC7+tD5UExjB9pJmrza09r+tkSV4b8d0LlpVldK3lFc25KRCIqzv1PkjWAj+rnEH+A/mcz1P7XpcN0U+D6X3NJKOr027DX6h7vWGjE4PGKax86kgIaKTU23N2edlQlWWl3GsQ69bwIDtcB78tSGtGocSzbzJRien5JCIopIiQ1u8JAqRWXC9qUvU/NfRVHxErjVz6EMF9Qzm9QWTjgH50MDgxvp6YHOWIdlhx61SeBQmDqdrP4TEi9QH1HRo7ceVV8qkQpmgjy8KO+XANna7neKCouenZDoY7T5XwyUsIc6UjbHYFb2jyetKf/0FbtLyfIx93nOCQYDOcAMWMJSnZaDi6bTdw9dxmVotn51x65/U4qTE8wjmOVq6++6/wSMwGwxBgMhwJtjmOSRQW4pOBRnWjmMQnRytuHBhMG2oWG4vCYhbMjeurwzQkuzQTjpEMBAWAT5DkZKR9dD9t70NATSEKVpwuvzPfJktOiE4ssEfjOFU+Nju6SIHwK+OQLu/PyAEiDe1WM2XjuRGDFU37cwV8A5ePFf2c/7eA+6DrNcdPqoc8MS3SzKeHfb0oFhw+VVyyzHFz5GHfbNoCeHuLTiyS32JGLrHucY7MM3b7impg/rN4LTrp7m2FeESUgw/+6mMDrB7okDcHHKzcXiFVBrdHAuYuloY2n+4lTTsLKRMMcGARKzQF+xolSDOuPCwkwlaLsH/76T1IHDUNw+tZvce/clrQ59p9dQ2KARqSQqyWcx09fmI2h0Cs/7jxj3kwYk0L/UztZdthUAhsVxfi8f2yGm5/JFStFwmISWF+ANOCBCNlDo+7hQ4FSujlNaQJR8SkGihprDXOQ+jj5tCHIE2ucf+v9+BH1u21//XsheEGzfpOJGayX+eu5cmT0L5eU8Vr3OSSV/JsobCbgClcyobsefeAQcbrnxMiSxhS3lzYEAhcQvZM3OysLRUGofSgR+3YcGq+cMiWhvkd30En0LAsgDLUwQfK"
+        data-encrypted="U2FsdGVkX199uw6C9RT4NkY8ifLnygRGSomhp8Y/oqnFbAyvyFtBmhCc6NMo7baa+YYxWaAz9Ti+pw9Aza3cofxAD5xZuVCcFodQ7YTtUlrqgDIQWqZtHt1bIOQJuFtZ49o8F9vaTckRbujUVLPcoMGKZI4r8kVDLWrqudJKihXxNa0XGttp/tdJ7Utv/DwXLQWUVp+Llc94Zq90GfFy/+ZFmGteRJ814myIefn7dOmIjYCgfX5CiGbZbMj4prX+oHFsM130TYtW4dg03WLfjWer4D4dvilmAOHKqh7EDSk84rg7yn1goeba1Sj2+Rdc/b3VbRvEAnExOs7aqlM6t8b6oNZvASKsMlcsUn3nh5qQnUjrwphxWXb9C7rxvAyqRV37LBkxAg4b+jhkngMUFcfgLz/kjPxmN6mjJX5GgJwaux0KWU+Ev6oPJVz8RYAfv7k1F+Mk2lpENcrAlAZFUJ64INl/Ls3zOLuWUFyWrPFXdkHvsfHVTAI3Q7LK2lNiVX0jqda3sv3dDOdEjHC95VJB3A5v1yeJd0Pw0iXejsegq4QhG2vHsZapSWEc10fMsJLqA9kunnWsHxLmMPr5oO7/hRxcrpErZ1O6iVY5R+riKG73CsszsIiY7axZCUCGkgyyO6GJLPP/SdzQ7Uj2phFxSUqTNqc3FpX0THa61Rp+hSEPYwqW4VZY5MmNYAJJs7orJnBsUG+H1F3Xnc2wOtsFtXZJvIPorhRrsWFbwPI/jdnE2kcOZf7EHWAs/AV5ZAh7T9H2IqMSv39faco9RBar+lNv8NIF/i6C1gGMFNKVP4zcgqyX85nT7bm7g6A5IMF6DyUUcnyNRqp+23hfFQtFsZptzkDs7+u5dXvmE8lspespOv/JeOWBTUAC6LeXEol6lY/1ENLGwSwS9MGzDTUuJm44UFAdwVaUVRSnLMj537qQXJ8rAi2vAc0ykPtiujlkJL6JGZNF0168OjcYlN05GM4tZCqKiFXwuF5oX0SL1ApZWVWYlaWvw9uVkuNkyHrq0FfRlSyOtbTSc2lM+EAdSaRuj9y4mIbY7vfZP4tPZRSfs6h/HddBaFAdglZiUzRPfmJ2+CayFI0tZ8WFtOhSPAhXdVofbNvaQ3lvwgbEdEHgMdFV/CJpbHtLao3l/+RCEy2aDJD50xInNv1s5NiP9iN6WYEE3GcavhP8RSUCPgecW+eF1500EPHrRDKWqvW+GDCYB7+n2OAUP1Qd9O2kqP8RuZygHYVQ2Q6P59y8WyKypp7+iG5I/XnawmfpXPwiojzhvijZfMdtHA6Xklqbs9BC4ACDhXxlYfUEzmCGh8wdxuFggpkaY4Qvocs5xIgkF+dZ3N2EgBFG+qathTrXH4T0Jta+8+SPfstdFc0AzeX9Df1aFwvqtVj7/dsT2QGYIPAUO/gdBPDTcsCNhh6C6Y9etkhxrxOBMSNvkcvfiHq57OnwAF75Dbq4UIv9z7QsqtaCG/VffVd8pRRvezd2rtbA+rfWZoamc8G7PeyJNVfoJSvMG9n4cMsIoOLv"
         data-shasum="876af8fbc926a0665d1cd459012d14a5d11122159424be866df54bb222be58c4"
             
         v-model="crypto"

@@ -1152,3 +1152,130 @@ ol li {
     gap: 10px;
     padding: 18px;
 }
+
+#profile-page {
+    box-sizing: border-box;
+    margin: 100px auto 0;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.profile-card,
+.profile-content {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 28px;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-avatar {
+    border: 3px solid #f1f1f1;
+    border-radius: 50%;
+    height: 140px;
+    margin: 0 auto 18px;
+    overflow: hidden;
+    width: 140px;
+}
+
+.profile-avatar img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    width: 100%;
+}
+
+.profile-avatar:hover img {
+    transform: rotate(360deg);
+}
+
+.profile-card h1 {
+    color: #333;
+    margin: 0 0 12px;
+}
+
+.profile-description {
+    color: #5c6b72;
+}
+
+.profile-social-links {
+    border-top: 1px solid #cdcdcd;
+    margin: 20px auto 0;
+    padding-top: 16px;
+    width: min(320px, 85%);
+}
+
+.profile-social-links a {
+    border-radius: 5px;
+    color: #5c6b72;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 5px;
+    padding: 7px;
+    transition: background 0.25s, color 0.25s;
+}
+
+.profile-social-links a:hover {
+    background: #66afef;
+    color: #fff;
+}
+
+.profile-content {
+    margin-top: 20px;
+}
+
+.profile-content h2 {
+    color: #333;
+    font-size: 1.3em;
+    margin: 0 0 16px;
+}
+
+.profile-entry {
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    color: #5c6b72;
+    display: flex;
+    gap: 14px;
+    padding: 16px;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.profile-entry:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.profile-entry-icon {
+    color: #3498db;
+    font-size: 1.4em;
+}
+
+.profile-entry span:nth-child(2) {
+    flex: 1;
+}
+
+.profile-entry strong,
+.profile-entry small {
+    display: block;
+}
+
+.profile-entry small {
+    color: #999;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    #profile-page {
+        padding: 15px;
+    }
+
+    .profile-card,
+    .profile-content {
+        padding: 20px;
+    }
+}
