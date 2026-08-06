@@ -1114,7 +1114,35 @@ ol li {
     display: flex;
     font-size: 1.08em;
     gap: 8px;
-    margin: 0 0 14px;
+    margin: 0;
+}
+
+.lecture-group-heading {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.material-intro-button {
+    background: rgba(52, 152, 219, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.32);
+    border-radius: 999px;
+    color: #3498db;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.72em;
+    line-height: 1;
+    padding: 5px 9px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.material-intro-button:hover,
+.material-intro-button:focus-visible {
+    background: #3498db;
+    color: #fff;
+    outline: none;
+    transform: translateY(-1px);
 }
 
 .lecture-item {
@@ -1159,6 +1187,111 @@ ol li {
 
 .materials-content {
     margin-top: 4px;
+}
+
+.material-intro-visible {
+    overflow: hidden;
+}
+
+.material-intro-modal {
+    align-items: center;
+    background: rgba(28, 43, 54, 0.42);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.material-intro-modal[hidden] {
+    display: none;
+}
+
+.material-intro-note {
+    background: linear-gradient(145deg, #fff 0%, #f4faff 100%);
+    border: 1px solid rgba(52, 152, 219, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 16px 50px rgba(26, 52, 68, 0.22);
+    box-sizing: border-box;
+    max-height: min(76vh, 680px);
+    max-width: 580px;
+    overflow-y: auto;
+    padding: 24px;
+    position: relative;
+    width: 100%;
+}
+
+.material-intro-note:focus {
+    outline: none;
+}
+
+.material-intro-note h3 {
+    color: #4c5960;
+    font-size: 1.08em;
+    margin: 0 36px 18px 0;
+}
+
+.material-intro-close {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    color: #84939b;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.1em;
+    height: 32px;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    transition: background 0.2s ease, color 0.2s ease;
+    width: 32px;
+}
+
+.material-intro-close:hover,
+.material-intro-close:focus-visible {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+    outline: none;
+}
+
+.material-intro-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.material-intro-list li {
+    align-items: baseline;
+    border-top: 1px dashed rgba(52, 152, 219, 0.2);
+    display: grid;
+    gap: 8px 16px;
+    grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1.5fr);
+    padding: 10px 0;
+}
+
+.material-intro-file {
+    color: #4c5960;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.material-intro-summary {
+    color: #75838a;
+    font-size: 0.88em;
+}
+
+@media (max-width: 520px) {
+    .material-intro-note {
+        padding: 22px 18px;
+    }
+
+    .material-intro-list li {
+        grid-template-columns: 1fr;
+    }
 }
 
 .material-name i {
