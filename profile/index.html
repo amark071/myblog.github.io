@@ -180,9 +180,20 @@
         <h2>Profile</h2>
         <div class="profile-summary">
         
-        <p>I am a master&#39;s student in Big Data at the School of Mathematical Sciences, Peking University. I received my B.S. in Information and Computational Science, with a focus on Computational Mathematics, from Peking University in 2025.</p>
+        <p>
+            <a
+                class="profile-blog-gate"
+                href="#profile"
+                data-profile-blog-gate
+                data-profile-blog-url="/myblog.github.io/"
+                aria-label="Blog entry"
+                onclick="return window.profileBlogGate.open(event, this)"
+            >I</a> am a master&#39;s student in Big Data at the School of Mathematical Sciences, Peking University. I received my B.S. in Information and Computational Science, with a focus on Computational Mathematics, from Peking University in 2025.
+        </p>
         
-        <p>My work sits at the intersection of numerical linear algebra, high-performance computing, and AI systems. I have research and engineering experience in streaming algorithms, sparse matrix solvers, large language model inference optimization, mixed-precision deep learning, and parallel programming.</p>
+        <p>
+            My work sits at the intersection of numerical linear algebra, high-performance computing, and AI systems. I have research and engineering experience in streaming algorithms, sparse matrix solvers, large language model inference optimization, mixed-precision deep learning, and parallel programming.
+        </p>
         
         </div>
     </section>
@@ -411,7 +422,114 @@
             Materials
         </a>
     </div>
+
+    <div
+        class="profile-blog-modal"
+        data-profile-blog-modal
+        onclick="window.profileBlogGate.closeFromBackdrop(event, this)"
+        hidden
+    >
+        <form
+            class="profile-blog-dialog"
+            data-profile-blog-form
+            onsubmit="return window.profileBlogGate.submit(event, this)"
+        >
+            <button
+                class="profile-blog-close"
+                type="button"
+                data-profile-blog-close
+                aria-label="关闭"
+                onclick="window.profileBlogGate.close()"
+            >
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <h3>Private Entry</h3>
+            <p>请输入访问密码</p>
+            <input
+                class="input profile-blog-password"
+                type="password"
+                autocomplete="off"
+                data-profile-blog-password
+                aria-label="访问密码"
+            />
+            <p class="profile-blog-error" data-profile-blog-error role="status"></p>
+            <button class="profile-blog-submit" type="submit">进入</button>
+        </form>
+    </div>
 </div>
+<script>
+(() => {
+    const expectedHash = "5277f33bc07d45e47d16628f9adc34c7bcd78e364cd081ce116f8ee26c0bcbe6";
+
+    async function sha256(value) {
+        const bytes = new TextEncoder().encode(value);
+        const digest = await window.crypto.subtle.digest("SHA-256", bytes);
+        return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
+    }
+
+    window.profileBlogGate = {
+        open(event, gate) {
+            const modal = document.querySelector("[data-profile-blog-modal]");
+            const password = document.querySelector("[data-profile-blog-password]");
+            const error = document.querySelector("[data-profile-blog-error]");
+
+            event.preventDefault();
+            if (!modal || !password || !error) return false;
+
+            modal.hidden = false;
+            document.body.classList.add("profile-blog-gate-visible");
+            password.value = "";
+            error.textContent = "";
+            modal.dataset.blogUrl = gate.dataset.profileBlogUrl;
+            window.setTimeout(() => password.focus(), 0);
+            return false;
+        },
+
+        close() {
+            const modal = document.querySelector("[data-profile-blog-modal]");
+            const password = document.querySelector("[data-profile-blog-password]");
+            const error = document.querySelector("[data-profile-blog-error]");
+
+            if (!modal || !password || !error) return;
+
+            modal.hidden = true;
+            document.body.classList.remove("profile-blog-gate-visible");
+            password.value = "";
+            error.textContent = "";
+            document.querySelector("[data-profile-blog-gate]")?.focus();
+        },
+
+        closeFromBackdrop(event, modal) {
+            if (event.target === modal) this.close();
+        },
+
+        async submit(event, form) {
+            event.preventDefault();
+
+            const modal = document.querySelector("[data-profile-blog-modal]");
+            const password = form.querySelector("[data-profile-blog-password]");
+            const error = form.querySelector("[data-profile-blog-error]");
+
+            if (!modal || !password || !error) return false;
+
+            if (await sha256(password.value) === expectedHash) {
+                window.location.assign(modal.dataset.blogUrl);
+                return false;
+            }
+
+            error.textContent = "密码错误";
+            password.value = "";
+            password.focus();
+            return false;
+        },
+    };
+
+    document.addEventListener("keydown", (event) => {
+        const modal = document.querySelector("[data-profile-blog-modal]");
+        if (event.key === "Escape" && modal && !modal.hidden) window.profileBlogGate.close();
+    });
+})();
+</script>
 
             <footer id="footer">
     <div id="footer-wrap">

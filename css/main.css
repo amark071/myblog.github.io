@@ -1305,6 +1305,110 @@ ol li {
     padding: 20px;
 }
 
+.profile-blog-gate {
+    color: inherit !important;
+    cursor: text;
+    text-decoration: none !important;
+}
+
+.profile-blog-gate:hover,
+.profile-blog-gate:focus,
+.profile-blog-gate:active {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.profile-blog-gate-visible {
+    overflow: hidden;
+}
+
+.profile-blog-modal {
+    align-items: center;
+    background: rgba(28, 43, 54, 0.42);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.profile-blog-modal[hidden] {
+    display: none;
+}
+
+.profile-blog-dialog {
+    background: linear-gradient(145deg, #fff 0%, #f4faff 100%);
+    border: 1px solid rgba(52, 152, 219, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 16px 50px rgba(26, 52, 68, 0.22);
+    box-sizing: border-box;
+    max-width: 380px;
+    padding: 26px;
+    position: relative;
+    width: 100%;
+}
+
+.profile-blog-dialog h3 {
+    color: #4c5960;
+    margin: 0 36px 8px 0;
+}
+
+.profile-blog-dialog > p:not(.profile-blog-error) {
+    color: #75838a;
+    margin: 0 0 16px;
+}
+
+.profile-blog-close {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    color: #84939b;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.1em;
+    height: 32px;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    width: 32px;
+}
+
+.profile-blog-password {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+
+.profile-blog-error {
+    color: #e74c3c;
+    font-size: 0.82em;
+    height: 20px;
+    margin: 6px 0 0;
+}
+
+.profile-blog-submit {
+    background: #3498db;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    padding: 9px 22px;
+    width: 100%;
+}
+
+.profile-blog-close:hover,
+.profile-blog-close:focus-visible,
+.profile-blog-submit:hover,
+.profile-blog-submit:focus-visible {
+    filter: brightness(0.96);
+    outline: none;
+}
+
 .profile-hero,
 .profile-section,
 .profile-actions {
