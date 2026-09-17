@@ -151,7 +151,7 @@
                 </a>
                 <a href="/myblog.github.io/images/wechat.png">
                     <i class="fa-brands fa-weixin fa-fw"></i>
-                    abc1832330763
+                    abc18382330763
                 </a>
             </div>
 
@@ -192,7 +192,7 @@
         </p>
         
         <p>
-            My work sits at the intersection of numerical linear algebra, high-performance computing, and AI systems. I have research and engineering experience in streaming algorithms, sparse matrix solvers, large language model inference optimization, mixed-precision deep learning, and parallel programming.
+            My work spans numerical linear algebra, high-performance computing, and AI systems. I build scalable numerical and learning systems for streaming algorithms, sparse direct solvers, large language model analysis and inference, evidence-grounded literature synthesis, and mixed-precision deep learning.
         </p>
         
         </div>
@@ -204,7 +204,7 @@
             
             <li><strong>Programming languages:</strong> C++, MATLAB, Python.</li>
             
-            <li><strong>Tools and frameworks:</strong> MPI, OpenMP, CUDA, Triton, LaTeX, CMake, TensorFlow, PyTorch.</li>
+            <li><strong>Tools and frameworks:</strong> MPI, OpenMP, CUDA, Triton, Git, CMake, LaTeX, TensorFlow, PyTorch.</li>
             
             <li><strong>Mathematics coursework:</strong> Mathematical Analysis, Advanced Algebra, Differential Equations, Probability Theory, Numerical Algebra, Numerical Analysis, and Optimization Methods.</li>
             
@@ -220,13 +220,13 @@
         <h3>Research Interests</h3>
         <ul class="profile-detail-list profile-box-list profile-interest-list">
             
-            <li>Artificial intelligence and large language model systems</li>
+            <li>Numerical linear algebra, sparse direct solvers, and scientific computing</li>
             
-            <li>Numerical linear algebra, sparse matrix computation, and scientific computing</li>
+            <li>GPU, parallel, and distributed computing</li>
             
             <li>Streaming algorithms, sketching, and quantile estimation</li>
             
-            <li>Parallel computing and performance optimization</li>
+            <li>Large language model systems, alignment analysis, and evidence-grounded generation</li>
             
         </ul>
 
@@ -234,28 +234,70 @@
         
         <article class="profile-record">
             <div class="profile-record-heading">
-                <h4>Research Intern, supervised by Associate Professor Tong Yang, School of Information Science and Technology, Peking University</h4>
+                <h4>Cooled-KLL for Quantile Estimation in Skewed Streams</h4>
                 <span>02.2024-09.2024</span>
             </div>
             <ul>
                 
-                <li>Improved the classic KLL algorithm with Elastic Sketch to achieve more accurate in-stream quantile estimation, leading to one research paper.</li>
+                <li>Combined Elastic Sketch with the classic KLL algorithm to improve quantile estimation on skewed data streams, with a theoretical speed improvement of roughly half an order of magnitude.</li>
                 
-                <li>Analyzed the asymptotic error behavior and temporal stability of Stair Sketch with DA Sketch as its atomic component.</li>
+                <li>[object Object]</li>
                 
             </ul>
         </article>
         
         <article class="profile-record">
             <div class="profile-record-heading">
-                <h4>Research Intern, supervised by Associate Professor Jinbiao Wu, School of Mathematical Sciences, Peking University</h4>
-                <span>11.2024-07.2025</span>
+                <h4>Augmented Lagrangian Acceleration of the Uzawa Method</h4>
+                <span>04.2025-07.2025</span>
             </div>
             <ul>
                 
-                <li>Improved the Uzawa method with an augmented Lagrangian approach to accelerate large-scale sparse saddle point problem solving.</li>
+                <li>Improved the Uzawa method for large-scale sparse saddle point problems by transforming a symmetric indefinite system into a smaller symmetric positive definite system.</li>
                 
-                <li>Refactored the CHOLMOD library in SuiteSparse-7.8.2 to support direct-method solving functionality.</li>
+                <li>With a penalty factor of 1e5, achieved performance close to MATLAB backslash and stronger results on large sparse matrices.</li>
+                
+            </ul>
+        </article>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>GPU Sparse Supernodal Direct Solver with Dynamic Delayed Pivoting</h4>
+                <span>04.2026-09.2026</span>
+            </div>
+            <ul>
+                
+                <li>Designed a CUDA-based sparse supernodal solver with dynamic delayed pivoting, node classification, batched kernels, and a custom dense delayed-pivot factorization algorithm.</li>
+                
+                <li>The CPU dense factorization matched LAPACK while handling singular matrices; the GPU pipeline solved a roughly 1.5-million-scale sparse system in about 20 seconds on a single RTX 5090, outperforming MATLAB.</li>
+                
+            </ul>
+        </article>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>Composable-Operator Framework for Academic Review Generation</h4>
+                <span>06.2026-08.2026</span>
+            </div>
+            <ul>
+                
+                <li>Proposed nine typed and composable operators for evidence selection, content organization, and recursive expansion in short- and long-form academic review generation.</li>
+                
+                <li>Validated the organizational signals on 2,221 real reviews; using the same underlying evidence, the recursive system outperformed existing models on all six long-form topics while reducing cost by several times. Manuscript under review.</li>
+                
+            </ul>
+        </article>
+        
+        <article class="profile-record">
+            <div class="profile-record-heading">
+                <h4>Constraint Geometry of Large Language Model Generation</h4>
+                <span>06.2026-08.2026</span>
+            </div>
+            <ul>
+                
+                <li>Tracked hidden-state distance to a compliance boundary to reveal low-dimensional instruction constraints and dynamic signals preceding policy violations.</li>
+                
+                <li>Detected internal warning signals a median of about 44 tokens before a violating output and predicted whether generation remained recoverable with up to 0.91 AUC. Manuscript under review.</li>
                 
             </ul>
         </article>
@@ -307,9 +349,9 @@
             <h4>Optimization Methods in Deep Learning</h4>
             <ul>
                 
-                <li>Used TensorFlow to conduct mixed-precision training for CNN and ResNet-50 models with FP32/FP16 and FP32/BFP16 settings.</li>
+                <li>Used TensorFlow to conduct mixed-precision training for CNN and ResNet-50 models with FP32/FP16 and FP32/BF16 settings, comparing convergence and training performance.</li>
                 
-                <li>Used PyTorch to study how LossScaling settings affect mixed-precision training outcomes.</li>
+                <li>Used PyTorch to study how Loss Scaling affects the stability and convergence of mixed-precision training.</li>
                 
             </ul>
         </article>
@@ -335,11 +377,9 @@
             </div>
             <ul>
                 
-                <li>Researched recommendation systems based on users&#39; formula-selection preferences and problem-solving patterns.</li>
+                <li>Researched recommendation systems based on users&#39; preferences for mathematical formulas and problem-solving methods, mapping technical approaches, modeling ideas, and application scenarios.</li>
                 
-                <li>Tested a numerical integration function library and fixed numerical and implementation errors.</li>
-                
-                <li>Studied Trilinos and reproduced selected numerical methods used in the library.</li>
+                <li>Tested and validated the accuracy of a numerical integration function library, locating numerical and implementation errors through targeted test cases and helping correct the code.</li>
                 
             </ul>
         </article>
@@ -351,11 +391,9 @@
             </div>
             <ul>
                 
-                <li>Used Triton to design hardware-aware block schemes for large model inference and parallel optimization.</li>
+                <li>Used Triton to design matrix-computation tiling strategies for different GPUs, selecting configurations from input shapes and hardware constraints to improve performance by about 5% over cuBLAS.</li>
                 
-                <li>Integrated Triton-generated assembly source files through C++ to complete code merging.</li>
-                
-                <li>Explored W4A8 quantization tools and combined W4A8 with W8A8 to optimize matrices of different sizes.</li>
+                <li>Compared the performance and accuracy of W4A8 and W8A8 across matrix shapes and designed a shape-aware quantization strategy.</li>
                 
             </ul>
         </article>
@@ -363,15 +401,13 @@
         <article class="profile-record">
             <div class="profile-record-heading">
                 <h4>Mechanical Transmission Simulation Laboratory, Chongqing Institute of Big Data, Peking University</h4>
-                <span>10.2024-present</span>
+                <span>10.2024-08.2026</span>
             </div>
             <ul>
                 
-                <li>Benchmarked large-scale sparse matrix solvers in Baltamatica and MATLAB for both saddle point and non-saddle point problems.</li>
+                <li>Studied the internals of MUMPS 5.6.2.2 and used its architecture as engineering guidance for a domestic supernodal numerical solver, focusing on the performance and accuracy of delayed pivoting.</li>
                 
-                <li>Proposed increasing penalty factors and combining iterative methods to accelerate direct-method solving, achieving faster results than MATLAB backslash on extremely large matrices.</li>
-                
-                <li>Studied the internals of MUMPS-5.6.2.2, wrote a user guide, annotated function-call relationships, and explored reconstructing a MUMPS-based multifrontal direct solver with a focus on delayed pivoting for supernodal computations.</li>
+                <li>Integrated the CPU implementations of the augmented-Lagrangian Uzawa method and dense delayed-pivot factorization into the Beida Feiyi numerical solver.</li>
                 
             </ul>
         </article>

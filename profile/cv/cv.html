@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> | My Blog</title>
+    <meta name="author" content="Mark. Z." />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/myblog.github.io/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/myblog.github.io/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/myblog.github.io/js/lib/math.js"></script>
+
+
+<script src="/myblog.github.io/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/myblog.github.io/css/main.css" />
+
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/myblog.github.io/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/myblog.github.io/">
+            <span>MY BLOG</span>
+        </a>
+        
+        <a href="/myblog.github.io/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Blog</span>
+        </a>
+        
+        <a href="/myblog.github.io/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/myblog.github.io/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/myblog.github.io/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/myblog.github.io/lectures">
+            <i class="fa-solid fa-book-open fa-fw"></i>
+            <span>&ensp;Lectures</span>
+        </a>
+        
+        <a href="/myblog.github.io/materials">
+            <i class="fa-solid fa-folder-open fa-fw"></i>
+            <span>&ensp;Materials</span>
+        </a>
+        
+        <a href="/myblog.github.io/profile">
+            <i class="fa-solid fa-user fa-fw"></i>
+            <span>&ensp;Profile</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;MY BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/myblog.github.io/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Blog</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/lectures">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-book-open fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Lectures</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/materials">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-folder-open fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Materials</div>
+                    </div>
+                </a>
+                
+                <a href="/myblog.github.io/profile">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-user fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Profile</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/9/17
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h5 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h5><p>姓名：郑怡卓</p>
+<p>性别：男</p>
+<p>年龄：23</p>
+<p>政治面貌：中共党员</p>
+<h6 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h6><p>电话：18382330763</p>
+<p>微信：abc18382330763</p>
+<p>邮箱：<a href="mailto:&#x32;&#53;&#48;&#x31;&#x32;&#x31;&#48;&#x31;&#x31;&#x33;&#64;&#x73;&#x74;&#x75;&#x2e;&#112;&#x6b;&#117;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#110;">2501210113@stu.pku.edu.cn</a></p>
+<p>个人主页：<a href="https://amark071.github.io/myblog.github.io/profile/">https://amark071.github.io/myblog.github.io/profile/</a></p>
+<h5 id="个人能力"><a href="#个人能力" class="headerlink" title="个人能力"></a>个人能力</h5><p>掌握的编程语言：C++、Python、Matlab； </p>
+<p>掌握的编程工具：并行与GPU编程：MPI、OpenMP、CUDA、Triton；工程工具：Git、CMake； </p>
+<p>数学系核心课程：数学分析、高等代数、微分方程、概率论、数值代数、数值分析、优化方法； </p>
+<p>计算机核心课程：数据结构与算法、并行与分布式计算、机器学习、AI中的编程、深度学习中的最优化方法； </p>
+<p>语言能力：大学英语六级、普通话二级甲等。   </p>
+<p> 教学能力：已取得高级中学数学教师资格证。</p>
+<h5 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h5><p>本科：北京大学 数学科学学院   2021.09-2025.07</p>
+<p>系别：信息与计算科学 | 专业：计算数学 </p>
+<p>硕士：北京大学 数学科学学院   2025.09-2027.07</p>
+<p>专业：大数据</p>
+<h5 id="科研经历"><a href="#科研经历" class="headerlink" title="科研经历"></a>科研经历</h5><ol>
+<li><p>使用Elastic Sketch对经典KLL算法进行改进，实现更好的流中分位数估计的效果；（《Cooled-KLL: Enhancing Quantile Estimation by Filtering Hot Item》）</p>
+<ul>
+<li>时间：2024.02-2024.09</li>
+<li>成果：特化了对于不均衡流的分位数估计的效果，理论速度提升约半个数量级。论文已发表于 31st SIGKDD Conference on Knowledge Discovery and Data Mining - Research Track 2025（CCF-A类），共同第一作者。</li>
+</ul>
+</li>
+<li><p>基于增广拉格朗日方法对Uzawa方法进行改进，加速大规模稀疏鞍点问题求解；</p>
+<ul>
+<li>时间：2025.04-2025.07</li>
+<li>成果：取罚因子 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>1</mn><mi>e</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">r=1e5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mord mathnormal">e</span><span class="mord">5</span></span></span></span> 时，其速度已经接近 MATLAB 的右除，在大规模稀疏矩阵表现上更好。该算法将对称不定的大规模稀疏矩阵转换成了求更小的对称正定的大规模稀疏矩阵的问题，除了速度更快以外，还为求解更大的矩阵提供了更多的可能。</li>
+</ul>
+</li>
+<li><p>基于 CUDA 设计并实现支持动态延迟主元的 GPU 稀疏超节点直接求解器，通过节点分级+批量 Kernel以及独立设计的延迟主元稠密分解算法加速分解及三角求解。</p>
+<ul>
+<li>时间：2026.04-2026.09</li>
+<li>成果：延迟主元稠密分解算法在CPU上速度和Lapack持平，但新增了对奇异矩阵分解的特殊处理步骤；整体流程基于GPU编程实现后，在单张5090上对150w规模的超大型稀疏矩阵求解时长约为20s，较 MATALB 有明显优势。</li>
+</ul>
+</li>
+<li><p>提出基于九类可组合算子驱动的学术综述生成框架，模型学习证据筛选、内容组织与递归展开规律，提升长短篇综述的结构性与生成质量。</p>
+<ul>
+<li>时间：2026.06-2026.08</li>
+<li>成果：从 2,221 篇真实学术综述中验证了九类算子的组织信号，并在使用相同底层证据的条件下，使结构递归生成在 6 个长篇主题上全面优于已有模型，尤其在成本上可以做到数倍的节约，目前论文在投递中。</li>
+</ul>
+</li>
+<li><p>提出大语言模型生成过程的约束几何方法，通过跟踪隐藏状态到合规边界的距离，揭示指令约束的低维结构及违规前的动态信号。</p>
+<ul>
+<li>时间：2026.06-2026.08</li>
+<li>成果：实验发现模型在输出违规内容前已出现可检测的内部信号，可提前约 44 个 token（中位数）预警，并以最高 0.91的 AUC值判断当前回答是否仍可恢复合规，目前论文在投递中</li>
+</ul>
+</li>
+</ol>
+<h5 id="实践经历"><a href="#实践经历" class="headerlink" title="实践经历"></a>实践经历</h5><ol>
+<li><p>北京大学重庆大数据研究院 有限元工业软件与数值分析实验室       </p>
+<ul>
+<li><p>时间：2023.05-2024.05</p>
+</li>
+<li><p>围绕用户对数学公式及问题求解方法的偏好开展推荐系统调研，梳理相关技术路线、建模思路与应用场景。</p>
+</li>
+<li><p>参与数值积分函数库的代码测试与精度验证，通过测试用例定位数值误差和程序实现问题，并协助完成代码修正。</p>
+</li>
+</ul>
+</li>
+<li><p>百川智能 大语言模型推理优化组              </p>
+<ul>
+<li><p>时间：2024.06-2024.10</p>
+</li>
+<li><p>利用Triton面向不同GPU硬件设计矩阵计算分块策略，结合输入形状与硬件资源约束选择配置，优化算子执行性能，相较于cuBLAS做到了约5%的提升。</p>
+</li>
+<li><p>探索W4A8的针对不同矩阵形状分析 W4A8 与 W8A8 的性能及精度差异，设计 shape-aware 量化策略。</p>
+</li>
+</ul>
+</li>
+<li><p>北京大学重庆大数据研究院 机械传动仿真实验室            </p>
+<ul>
+<li>时间：2024.10-2026.08</li>
+<li>研究Mumps-5.6.2.2的底层原理，尝试以其为工程技术指导，结合超节点方法构建新一代国产自主研发数值求解器，主要研究方向为延迟主元方法在超节点问题上性能与精度优化的推广。</li>
+<li>完成了科研经历中2、3项目的落地实践，目前项目2的基于增广拉格朗日方法对Uzawa方法、项目3的延迟主元稠密分解算法的CPU版本已运用到北达飞易数值求解器中。</li>
+</ul>
+</li>
+<li><p>课程项目实践经历</p>
+<ul>
+<li>深度学习中的最优化方法课程：利用TensorFlow 框架对CNN和 ResNet-50网络进行FP32&#x2F;FP16和FP32&#x2F;BF16的混合精度训练，对比不同精度配置的收敛效果与训练性能、利用PyTorch框架探索Loss Scaling策略对混合精度训练稳定性和收敛结果的影响。</li>
+<li>人工智能中的编程课程：探究利用CUDA优化CNN中各层网络，并基于此框架完成 MNIST 数据集的图像分类。</li>
+</ul>
+</li>
+</ol>
+<h5 id="校园经历"><a href="#校园经历" class="headerlink" title="校园经历"></a>校园经历</h5><h6 id="学生工作经历"><a href="#学生工作经历" class="headerlink" title="学生工作经历"></a><strong>学生工作经历</strong></h6><p>北京大学数学科学学院2021级本科5班班长，班级获得“优秀团支部”、“先进班集体”、“示范班集体”称号；</p>
+<p>北京大学数学科学学院学生工作办公室学生助管（时间：2023.09-2024.01）；  </p>
+<p>北京大学数学科学学院2023级本科3班辅导员（时间：2025.09-2026.01）；  </p>
+<p>北京大学数学科学学院大数据硕士党支部组织委员（时间：2025.09-至今）。   </p>
+<h6 id="社会实践工作经历"><a href="#社会实践工作经历" class="headerlink" title="社会实践工作经历"></a><strong>社会实践工作经历</strong></h6><p>北京大学2022年四川招生组志愿者； </p>
+<p>北京大学数学科学学院2022年开学迎新、北京大学2023年开学典礼学工部志愿者；</p>
+<p>北京大学2023、2024年校园开放暨招生咨询日数学科学学院志愿者；</p>
+<p>北京大学数学科学学院2025年“五四青年说”活动演讲人；</p>
+<p>北京大学2025年研究生新生骨干“1000+”领航培养计划。</p>
+<h6 id="获奖经历"><a href="#获奖经历" class="headerlink" title="获奖经历"></a><strong>获奖经历</strong></h6><p>北京大学2022年、2023年、2024年“社会工作奖”；</p>
+<p>北京大学2025年“优秀毕业生”。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2026 My Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Mark. Z.
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/myblog.github.io/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
